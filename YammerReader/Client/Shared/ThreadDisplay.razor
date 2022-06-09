@@ -1,0 +1,53 @@
+﻿@inherits Library.CommonBlazorBase
+
+@if (ListData != null)
+{
+    @foreach (var item in ListData)
+    {
+        <div class="card border-secondary mb-2">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-4">
+                    @item.sender_name
+                </div>
+                <div class="col-8 text-end">
+                    <h6 class="card-subtitle mt-1 text-muted">@item.created_at</h6>
+                </div>
+            </div>
+        </div>
+          <div class="card-body text-secondary">
+            <p class="card-text"><pre style="max-width:1000px;">@item.body</pre></p>
+            @if (item.thread_count > 0)
+            {
+                <button type="button" class="btn btn-outline-primary btn-sm @SetDisabled(item)" @onclick="(()=>RetrieveReplies(item))">
+                    <span class="oi oi-chat" aria-hidden="true"></span> 展開 @item.thread_count 筆
+                </button>
+            }
+            <a class="btn btn-outline-primary btn-sm ms-1" href="Threads/@item.id"><span class="oi oi-link-intact" aria-hidden="true"></span> 單一連結</a>
+            @*<a href="#" class="card-link">@item.attachments</a>*@
+            </div>
+        </div>
+        @*回覆*@
+        if (item.Replies != null)
+        {
+            @foreach (var replyitem in item.Replies)
+            {
+                <div class="card border-warning bg-warning bg-opacity-10 mb-1 w-75 ms-5">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-4">
+                                @replyitem.sender_name
+                            </div>
+                            <div class="col-8 text-end">
+                               <h6 class="card-subtitle mt-1 text-muted">@replyitem.created_at</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body border-warning">
+                        <p class="card-text"><pre style="max-width:1000px;">@replyitem.body</pre></p>   
+                    </div>
+                </div>
+            }
+        }
+    }
+ }

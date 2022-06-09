@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using YammerReader.Client.DataModel;
 using YammerReader.Client.Library;
+using YammerReader.Client.Shared;
 using YammerReader.Shared;
 
 namespace YammerReader.Client.Pages
@@ -10,6 +11,8 @@ namespace YammerReader.Client.Pages
         [Parameter] public string? group_id { get; set; }
 
         private ListThreadsModel Model { get; set; } = new ListThreadsModel();
+
+        private ThreadDisplay? threadDisplay { get; set; }
 
         private PagerDto Pager = new PagerDto { PageIndex = 1, PageSize = 10 };
 
@@ -36,24 +39,10 @@ namespace YammerReader.Client.Pages
 
             Model.Group = await base.PostAsJsonAsync<YammerGroup>("Yammer/GetGroup", query);
 
-            List<YammerMessage>? result = await base.PostAsJsonAsync<List<YammerMessage>>("Yammer/QueryRootMessage", query);
+            List<YammerMessage>? result = await base.PostAsJsonAsync<List<YammerMessage>>("Yammer/GetGroupThreads", query);
             
             Model.ListData = result;
             Pager.AllCount = result[0].ttlrows;
-        }
-
-        private async Task RetrieveReplies(YammerMessage item)
-        {
-            YammerFilter query = new YammerFilter()
-            {
-                thread_id = item.thread_id
-            };
-            item.Replies = await base.PostAsJsonAsync<List<YammerMessage>>("Yammer/QueryThreadMessage", query);
-        }
-
-        private string SetDisabled(YammerMessage item)
-        {
-            return (item.Replies != null ? "disabled" : "");
         }
     }
 }
