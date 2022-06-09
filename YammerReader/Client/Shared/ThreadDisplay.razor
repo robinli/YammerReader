@@ -16,7 +16,7 @@
             </div>
         </div>
           <div class="card-body text-secondary">
-            <p class="card-text"><pre style="max-width:1000px;">@item.body</pre></p>
+            <pre style="max-width:1000px;">@item.body</pre>
             @if (item.thread_count > 0)
             {
                 <button type="button" class="btn btn-outline-primary btn-sm @SetDisabled(item)" @onclick="(()=>RetrieveReplies(item))">
@@ -30,12 +30,15 @@
         @*回覆*@
         if (item.Replies != null)
         {
+            int index = 0;
             @foreach (var replyitem in item.Replies)
             {
+                index++;
                 <div class="card border-warning bg-warning bg-opacity-10 mb-1 w-75 ms-5">
                     <div class="card-header">
                         <div class="row">
                             <div class="col-4">
+                                <span class="badge bg-warning rounded-pill">@index</span>
                                 @replyitem.sender_name
                             </div>
                             <div class="col-8 text-end">
@@ -43,8 +46,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card-body border-warning">
-                        <p class="card-text"><pre style="max-width:1000px;">@replyitem.body</pre></p>   
+                    <div class="card-body border-warning pb-0">
+                        <pre style="max-width:1000px;">@replyitem.body</pre>
                     </div>
                 </div>
             }

@@ -16,13 +16,13 @@
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
                 <span class="oi oi-home" aria-hidden="true"></span> Home
             </NavLink>
-        </div>
+        </div>        
         @foreach (var item in ListData)
         {
             @if (item.order_num < 100)
-            {
+            {                
                 <div class="nav-item px-3">
-                    <NavLink class="nav-link" @onclick="@(()=>MenuItemClick(@item))">
+                    <NavLink class="nav-link" href="@GetUrl(item)" Match="NavLinkMatch.All">
                         <span class="oi oi-inbox" aria-hidden="true"></span> @item.group_name
                     </NavLink>
                 </div>
@@ -30,7 +30,7 @@
             else
             {
                 <div class="nav-item px-3">
-                    <NavLink class="nav-link" @onclick="@(()=>MenuItemClick(@item))">
+                    <NavLink class="nav-link" href="@GetUrl(item)" Match="NavLinkMatch.All">
                         <span class="oi oi-folder" aria-hidden="true"></span> @item.group_name
                     </NavLink>
                 </div>
@@ -40,7 +40,7 @@
 </div>
 
 @code {
-    
+
     private List<YammerGroup> ListData { get; set; } = new List<YammerGroup>();
 
     private bool collapseNavMenu = true;
@@ -60,14 +60,15 @@
     private async Task RetrieveData()
     {
         string url = "Yammer/GetAllGroups";
-        List<YammerGroup> result = await base.PostAsJsonAsync<List<YammerGroup>>(url, null);
-
-        ListData = result;
+        var result = await base.PostAsJsonAsync<List<YammerGroup>>(url, null!);
+        if (result != null)
+        {
+            ListData = result;
+        }        
     }
-
-    private async Task MenuItemClick(YammerGroup group)
+    
+    private string GetUrl(YammerGroup group)
     {
-        await Task.Delay(0);
-        NavigationManager.NavigateTo($"/GroupThreads/{group.id}", forceLoad : true, replace : false);
+        return $"GroupThreads/{group.id}";
     }
 }

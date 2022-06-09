@@ -9,7 +9,7 @@ namespace YammerReader.Client.Pages
     public partial class GroupThreads : CommonBlazorBase
     {
         [Parameter] public string? group_id { get; set; }
-
+        
         private ListThreadsModel Model { get; set; } = new ListThreadsModel();
 
         private ThreadDisplay? threadDisplay { get; set; }
@@ -22,6 +22,11 @@ namespace YammerReader.Client.Pages
         }
 
         protected override async Task OnInitializedAsync()
+        {
+            await RetrieveData(1);
+        }
+
+        protected override async Task OnParametersSetAsync()
         {
             await RetrieveData(1);
         }
