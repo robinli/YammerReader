@@ -1,0 +1,3624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SchemaComparison>
+  <Version>10</Version>
+  <SourceModelProvider>
+    <ConnectionBasedModelProvider>
+      <ConnectionString>Data Source=bud4net-db1;Initial Catalog=YammerData;Persist Security Info=True;User ID=SQLManager;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False</ConnectionString>
+    </ConnectionBasedModelProvider>
+  </SourceModelProvider>
+  <TargetModelProvider>
+    <ProjectBasedModelProvider>
+      <ProjectGuid>{54cbaf7a-84ac-43d0-a3b7-7d1fa6f946dd}</ProjectGuid>
+      <Name>YammerSqlDB</Name>
+    </ProjectBasedModelProvider>
+  </TargetModelProvider>
+  <SchemaCompareSettingsService>
+    <SchemaCompareSettingsService>
+      <PropertyElementName>
+        <Name>Version</Name>
+        <Value>1</Value>
+      </PropertyElementName>
+    </SchemaCompareSettingsService>
+    <ConfigurationOptionsElement>
+      <PropertyElementName>
+        <Name>PlanGenerationType</Name>
+        <Value>SqlDeploymentOptions</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>AllowExistingModelErrors</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>AllowIncompatiblePlatform</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>BackupDatabaseBeforeChanges</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreIndexesStatisticsOnEnclaveEnabledColumns</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>BlockOnPossibleDataLoss</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>BlockWhenDriftDetected</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>CompareUsingTargetCollation</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>CommentOutSetVarDeclarations</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>CreateNewDatabase</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DeployDatabaseInSingleUserMode</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DisableAndReenableDdlTriggers</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DisableIndexesForDataPhase</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DisableParallelismForEnablingIndexes</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotAlterChangeDataCaptureObjects</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotAlterReplicatedObjects</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DropConstraintsNotInSource</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DropDmlTriggersNotInSource</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DropExtendedPropertiesNotInSource</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DropIndexesNotInSource</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DropPermissionsNotInSource</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DropObjectsNotInSource</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DropRoleMembersNotInSource</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DropStatisticsNotInSource</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>GenerateSmartDefaults</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>HashObjectNamesInLogs</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreDdlTriggerOrder</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreDdlTriggerState</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreObjectPlacementOnPartitionScheme</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreAuthorizer</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreDefaultSchema</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreRouteLifetime</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreCryptographicProviderFilePath</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreComments</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreWhitespace</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreKeywordCasing</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreSemicolonBetweenStatements</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnorePartitionSchemes</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreTablePartitionOptions</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreWithNocheckOnCheckConstraints</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreWithNocheckOnForeignKeys</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreIdentitySeed</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreIncrement</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreFillFactor</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreIndexPadding</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreColumnCollation</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreColumnOrder</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreLockHintsOnIndexes</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreTableOptions</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreIndexOptions</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreDmlTriggerOrder</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreDmlTriggerState</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreAnsiNulls</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreQuotedIdentifiers</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreUserSettingsObjects</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreFilegroupPlacement</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreFullTextCatalogFilePath</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreFileAndLogFilePath</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreLoginSids</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreNotForReplication</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreFileSize</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>AllowUnsafeRowLevelSecurityDataMovement</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IncludeCompositeObjects</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IncludeTransactionalScripts</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IsAlwaysEncryptedParameterizationEnabled</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>NoAlterStatementsToChangeCLRTypes</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>PopulateFilesOnFileGroups</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>PreserveIdentityLastValues</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>RegisterDataTierApplication</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>RebuildIndexesOfflineForDataPhase</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>RestoreSequenceCurrentValue</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ScriptDatabaseCollation</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ScriptDatabaseCompatibility</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ScriptDatabaseOptions</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ScriptDeployStateChecks</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ScriptFileSize</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ScriptNewConstraintValidation</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ScriptRefreshModule</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>TargetDatabaseName</Name>
+        <Value>YammerSqlDB</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>TargetConnectionString</Name>
+        <Value>Integrated Security=True;Pooling=False;Connect Timeout=30</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>TreatVerificationErrorsAsWarnings</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>UnmodifiableObjectWarnings</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>VerifyCollationCompatibility</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>VerifyDeployment</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>RunDeploymentPlanExecutors</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>AllowDropBlockingAssemblies</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotEvaluateSqlCmdVariables</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropAggregates</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropApplicationRoles</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropAssemblies</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropAsymmetricKeys</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropAudits</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropBrokerPriorities</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropCertificates</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropClrUserDefinedTypes</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropColumnEncryptionKeys</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropColumnMasterKeys</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropContracts</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropCredentials</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropDatabaseScopedCredentials</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropCryptographicProviders</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropDatabaseAuditSpecifications</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropDatabaseRoles</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropDatabaseTriggers</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreDatabaseWorkloadGroups</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropDatabaseWorkloadGroups</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>IgnoreWorkloadClassifiers</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropWorkloadClassifiers</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropDefaults</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropEndpoints</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropErrorMessages</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropEventNotifications</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropEventSessions</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropExtendedProperties</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropExternalDataSources</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropExternalFileFormats</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropExternalLanguages</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropExternalLibraries</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropExternalStreamingJobs</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropExternalTables</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropExternalStreams</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropFilegroups</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropFiles</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropFileTables</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropFullTextCatalogs</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropFullTextStoplists</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropTableValuedFunctions</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropLinkedServerLogins</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropLinkedServers</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropLogins</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropMessageTypes</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropPartitionFunctions</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropPartitionSchemes</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropPermissions</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropQueues</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropRemoteServiceBindings</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropRoleMembership</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropRoutes</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropRules</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropScalarValuedFunctions</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropSearchPropertyLists</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropSecurityPolicies</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropSequences</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropServerAuditSpecifications</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropServerRoleMembership</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropServerRoles</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropServerTriggers</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropServices</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropSignatures</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropStoredProcedures</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropSymmetricKeys</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropSynonyms</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropTables</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropUserDefinedDataTypes</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropUserDefinedTableTypes</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropUsers</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropViews</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>DoNotDropXmlSchemaCollections</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeAggregates</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeApplicationRoles</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeAssemblies</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeAsymmetricKeys</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeAudits</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeBrokerPriorities</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeCertificates</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeClrUserDefinedTypes</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeColumnEncryptionKeys</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeColumnMasterKeys</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeContracts</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeCredentials</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeDatabaseScopedCredentials</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeCryptographicProviders</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeDatabaseAuditSpecifications</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeDatabaseRoles</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeDatabaseTriggers</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeDefaults</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeEndpoints</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeErrorMessages</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeEventNotifications</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeExternalDataSources</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeExternalFileFormats</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeExternalLanguages</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeExternalLibraries</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeExternalStreamingJobs</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeExternalTables</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeExternalStreams</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeEventSessions</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeFilegroups</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeFiles</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeFileTables</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeFullTextCatalogs</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeFullTextStoplists</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeTableValuedFunctions</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeLinkedServerLogins</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeLinkedServers</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeLogins</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeMessageTypes</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludePartitionFunctions</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludePartitionSchemes</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeQueues</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeRemoteServiceBindings</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeRoutes</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeRules</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeScalarValuedFunctions</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeSearchPropertyLists</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeSecurityPolicies</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeSequences</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeServerAuditSpecifications</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeServerRoleMembership</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeServerRoles</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeServerTriggers</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeServices</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeSignatures</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeStoredProcedures</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeSymmetricKeys</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeSynonyms</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeTables</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeUserDefinedDataTypes</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeUserDefinedTableTypes</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeUsers</Name>
+        <Value>True</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeViews</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>ExcludeXmlSchemaCollections</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>AllowExternalLibraryPaths</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>AllowExternalLanguagePaths</Name>
+        <Value>False</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlServerDdlTrigger</Name>
+        <Value>ExcludedType</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlRoute</Name>
+        <Value>ExcludedType</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlEventNotification</Name>
+        <Value>ExcludedType</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlEndpoint</Name>
+        <Value>ExcludedType</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlErrorMessage</Name>
+        <Value>ExcludedType</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlFile</Name>
+        <Value>ExcludedType</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlLogin</Name>
+        <Value>ExcludedType</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlLinkedServer</Name>
+        <Value>ExcludedType</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlCredential</Name>
+        <Value>ExcludedType</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDatabaseEncryptionKey</Name>
+        <Value>ExcludedType</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlMasterKey</Name>
+        <Value>ExcludedType</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDatabaseAuditSpecification</Name>
+        <Value>ExcludedType</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlServerAudit</Name>
+        <Value>ExcludedType</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlServerAuditSpecification</Name>
+        <Value>ExcludedType</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlCryptographicProvider</Name>
+        <Value>ExcludedType</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlUserDefinedServerRole</Name>
+        <Value>ExcludedType</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlEventSession</Name>
+        <Value>ExcludedType</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDatabaseOptions</Name>
+        <Value>ExcludedType</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlLinkedServerLogin</Name>
+        <Value>ExcludedType</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlServerRoleMembership</Name>
+        <Value>ExcludedType</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlAssemblyFile</Name>
+        <Value>ExcludedType</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlUser</Name>
+        <Value>ExcludedType</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlRoleMembership</Name>
+        <Value>ExcludedType</Value>
+      </PropertyElementName>
+      <PropertyElementName>
+        <Name>Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlSequence</Name>
+        <Value>ExcludedType</Value>
+      </PropertyElementName>
+    </ConfigurationOptionsElement>
+  </SchemaCompareSettingsService>
+  <SchemaCompareViewSettings>
+    <GroupBy>2</GroupBy>
+    <ZoomLevel>100</ZoomLevel>
+    <Filter>Equals_Objects,Not_Supported_Deploy</Filter>
+  </SchemaCompareViewSettings>
+  <ExcludedSourceElements>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>BNRECOLNS</Name>
+      <Name>EXCH_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>BNRECOLNS</Name>
+      <Name>EXCHCO</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>CUSTOM_USER</Name>
+      <Name>LOGIN_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlIndex, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>CUSTOM_USER</Name>
+      <Name>UNIQUE_LOGIN_ID_COMP_NO</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>INV_QueryPurchaseAndStockLevel_TEST</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ASS_QueryCROforCollection_作廢</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ASS_QueryCROItemsAtSupplier_作廢</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ASS_QueryOutstandingCROItems_作廢</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ASS_QueryPendingCRO_作廢</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ASS_QueryCROItemsSendToSupplier_作廢</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ASS_QueryPendingSwopouts_作廢</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlView, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>viewASSQueryCROItemsSentToSupplier_作廢</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlView, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>viewASSQueryPendingSwopouts_作廢</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dev</Name>
+      <Name>TSQL問題01_預存參數改變Grouping條件</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>PRGRVLN</Name>
+      <Name>SHIP_QTY</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>INV_QuerySaleSummary2</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>INV_QueryPurchaseAndStockLevel2</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>INV_QuerySaleAndStockLevel2</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlScalarFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>coxsp</Name>
+      <Name>GetID_for_seqATTRVALUE_AGID</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ACC_QueryLedgerEntryList_測試</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>INV_QueryStockTransaction_作廢</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlScalarFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>coxsp</Name>
+      <Name>ACC_CalcNewCompanyNo</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>BNXFRLN</Name>
+      <Name>BNXFRHDS_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlIndex, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>BNXFRLN</Name>
+      <Name>FK_BNXFRLN_BNXFRHDS_ID_to_BNXFRHD</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>BNXFRHDS</Name>
+      <Name>BNXFRHD_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>BNXFRHDS</Name>
+      <Name>ACTYPE</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>BNXFRHDS</Name>
+      <Name>ACCNO</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>BNXFRHDS</Name>
+      <Name>ACCOUNT_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>BNXFRHDS</Name>
+      <Name>BPCOM_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>BNXFRHDS</Name>
+      <Name>AMOUNT</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>BNXFRHDS</Name>
+      <Name>FAMOUNT</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>BNXFRHDS</Name>
+      <Name>ACTIVEYN</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlIndex, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>BNXFRHDS</Name>
+      <Name>FK_BNXFRHDS_BNXFRHD_ID_to_BNXFRHD</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlTableBase</Name>
+      <Name>cox</Name>
+      <Name>BNXFRHDS</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>coxsp</Name>
+      <Name>ACC_Rollover_03_AccumulatedProfitLoss_ROBIN_TEST</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlMultiStatementTableValuedFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>coxsp</Name>
+      <Name>INV_VertifyMultiBarcode_To_Delete_刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlScalarFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>coxsp</Name>
+      <Name>INV_VertifyBarcode_To_Delete_刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ACC_QueryDebtorAgeDetail2</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dev</Name>
+      <Name>補資料_還原Debtor Account Reconciliation客戶餘額錯誤</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>STOCK_GRP</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>STOCK_GRP</Name>
+      <Name>STOCK_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>STOCK_GRP</Name>
+      <Name>STGRP_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlForeignKeyConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>FK_STOCK_GRP_RELATIONS_to_STGRP</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlForeignKeyConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>FK_STOCK_GRP_STOCK_ID_to_STOCK</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlIndex, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>STOCK_GRP</Name>
+      <Name>FK_STOCK_GRP_RELATIONS_to_STGRP</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlIndex, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>STOCK_GRP</Name>
+      <Name>FK_STOCK_GRP_STOCK_ID_to_STOCK</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>INV_STKADSLN_Verify</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>INV_GetBarcodeEdigChangeLog</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>STTAKELN</Name>
+      <Name>STTYPE</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>coxsp</Name>
+      <Name>ACC_Rollover_03_AccumulatedProfitLoss_補2家廠商</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>coxsp</Name>
+      <Name>ACC_Rollover_03_AccumulatedProfitLoss_補2家廠商</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>ChannelMessage_SyncUnread_待刪</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ACC_QueryLedgerAccount_Advance_TEST</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ACC_QueryLedgerEntryList_Advance_TEST</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ACC_QueryDebtorStatement_ALL2</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>cox</Name>
+      <Name>ACC_QueryDebtorStatement_ALL2</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>cox</Name>
+      <Name>INV_QueryStockTransaction_Consignm_Export</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>cox</Name>
+      <Name>LSM_QueryStockLedger</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>RPT_ACC_QueryDebtorStatement</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LCUSTOM_BTMOD</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LCUSTOM_BTMOD</Name>
+      <Name>CUST_NO</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LCUSTOM_BTMOD</Name>
+      <Name>CUST_NAME</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LCUSTOM_BTMOD</Name>
+      <Name>CONT_NAME</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LCUSTOM_BTMOD</Name>
+      <Name>CONT_EMAIL</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LCUSTOM_BTMOD</Name>
+      <Name>CONT_TEL</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LCUSTOM_BTMOD</Name>
+      <Name>CONT_FAX</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LCUSTOM_BTMOD</Name>
+      <Name>ZIPCODE</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LCUSTOM_BTMOD</Name>
+      <Name>CONT_ADDR1</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LCUSTOM_BTMOD</Name>
+      <Name>CONT_ADDR2</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LCUSTOM_BTMOD</Name>
+      <Name>CONT_ADDR3</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LCUSTOM_BTMOD</Name>
+      <Name>CONT_ADDR4</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LCUSTOM_BTMOD</Name>
+      <Name>DESCTXT</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LCUSTOM_BTMOD</Name>
+      <Name>PROC_MSG</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LCUSTOM_BTMOD</Name>
+      <Name>ACTIVEYN</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlTableBase</Name>
+      <Name>cox</Name>
+      <Name>LCUSTOM_BTMOD</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LSM_Invoce_AfterCreated</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlMultiStatementTableValuedFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ACC_QueryControlAccountUndeposited</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>dev</Name>
+      <Name>aDevTool_DBA_Create_Prevent_Delete_All</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dev</Name>
+      <Name>aDevTool_DBA_Create_Prevent_Delete_All</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>tiptop</Name>
+      <Name>Report_AccountTransSummary</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>tiptop</Name>
+      <Name>Report_AccountTransSummary</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlScalarFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ACC_GetPayDate</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlMultiStatementTableValuedFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>INV_FaultyStockAgeAnalysis</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPartitionScheme, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPartitionFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>BarcodePartitionFunction</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Select.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>cox</Name>
+      <Name>INV_NormalStockAgeAnalysis__刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlMultiStatementTableValuedFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>INV_NormalStockAgeAnalysis__刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>tiptop</Name>
+      <Name>AppendUploadTBLog</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>tiptop</Name>
+      <Name>AppendUploadTBLog</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>PORDERHD_LOG</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>PORDERLN_LOG</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlFilegroup, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SECONDARY</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>PODFTHD</Name>
+      <Name>SODOCTYPE</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>PODFTHD</Name>
+      <Name>DOCLN_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>PODFTHD</Name>
+      <Name>SUPER_NO</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>PODFTHD</Name>
+      <Name>SUPPLR_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>PODFTHD</Name>
+      <Name>STOCKNO</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>PODFTHD</Name>
+      <Name>STOCK_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>PODFTHD</Name>
+      <Name>QTY</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>PODFTHD</Name>
+      <Name>UNIT_PRICE</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>PODFTHD</Name>
+      <Name>TXGRP_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>PODFTHD</Name>
+      <Name>APPVOU</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>PODFTHD</Name>
+      <Name>PORDERNO</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>PODFTHD</Name>
+      <Name>PORDERHD_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>PODFTHD</Name>
+      <Name>PORDERLN_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>PODFTHD</Name>
+      <Name>ACTIVEYN</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlTableBase</Name>
+      <Name>cox</Name>
+      <Name>PODFTHD</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>cox</Name>
+      <Name>PUR_QueryRequisitionToPurchase</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTableType, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>PurchaseSrcTableType</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>cox</Name>
+      <Name>PUR_QueryPurchaseOrderDraftSaved</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>cox</Name>
+      <Name>PUR_QueryPurchaseOrderDraft</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>coxsp</Name>
+      <Name>PUR_PurchaseOrderCreateByDraft</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlScalarFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>coxsp</Name>
+      <Name>VerifyEmailFormat</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>coxsp</Name>
+      <Name>VerifyEmailFormat</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>SDM_SaleCostingGetDetails_TEST</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>cox</Name>
+      <Name>SDM_SaleCostingGetDetails_TEST</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>coxsp</Name>
+      <Name>ACC_Rollover_03_AccumulatedProfitLoss_Version2</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LGRTNHD_BILL</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGRTNHD_BILL</Name>
+      <Name>LGRTNHD_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGRTNHD_BILL</Name>
+      <Name>LGCONHD_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGRTNHD_BILL</Name>
+      <Name>LGCONLN_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGRTNHD_BILL</Name>
+      <Name>QTY</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGRTNHD_BILL</Name>
+      <Name>UNIT_PRICE</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGRTNHD_BILL</Name>
+      <Name>AMOUNT</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGRTNHD_BILL</Name>
+      <Name>ACTIVEYN</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDmlTrigger, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LGRTNHD_BILL_insert_update_trigger</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDmlTrigger, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LGRTNHD_BILL_delete_all_trigger</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlTableBase</Name>
+      <Name>cox</Name>
+      <Name>LGRTNHD_BILL</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LGDELHD_BILL_刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGDELHD_BILL_刪除</Name>
+      <Name>LGDELHD_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGDELHD_BILL_刪除</Name>
+      <Name>LGCONHD_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGDELHD_BILL_刪除</Name>
+      <Name>LGCONLN_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGDELHD_BILL_刪除</Name>
+      <Name>QTY</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGDELHD_BILL_刪除</Name>
+      <Name>UNIT_PRICE</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGDELHD_BILL_刪除</Name>
+      <Name>AMOUNT</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGDELHD_BILL_刪除</Name>
+      <Name>ACTIVEYN</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDmlTrigger, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LGDELHD_BILL_delete_all_trigger</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDmlTrigger, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LGDELHD_BILL_insert_update_trigger</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlTableBase</Name>
+      <Name>cox</Name>
+      <Name>LGDELHD_BILL_刪除</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LGRTNHD_BILL_刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGRTNHD_BILL_刪除</Name>
+      <Name>LGRTNHD_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGRTNHD_BILL_刪除</Name>
+      <Name>LGCONHD_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGRTNHD_BILL_刪除</Name>
+      <Name>LGCONLN_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGRTNHD_BILL_刪除</Name>
+      <Name>QTY</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGRTNHD_BILL_刪除</Name>
+      <Name>UNIT_PRICE</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGRTNHD_BILL_刪除</Name>
+      <Name>AMOUNT</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGRTNHD_BILL_刪除</Name>
+      <Name>ACTIVEYN</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlTableBase</Name>
+      <Name>cox</Name>
+      <Name>LGRTNHD_BILL_刪除</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LGINVLNS_刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGINVLNS_刪除</Name>
+      <Name>LGINVHD_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGINVLNS_刪除</Name>
+      <Name>LGINVLN_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGINVLNS_刪除</Name>
+      <Name>FEEKIND</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGINVLNS_刪除</Name>
+      <Name>ACTIVEYN</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlIndex, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LGINVLNS_刪除</Name>
+      <Name>FK_LGINVLNS_LGINVHD_ID_to_LGINVHD</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlIndex, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LGINVLNS_刪除</Name>
+      <Name>FK_LGINVLNS_LGINVLN_ID_to_LGINVLN</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDmlTrigger, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LGINVLNS_delete_all_trigger</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDmlTrigger, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LGINVLNS_insert_update_trigger</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LSM_CalcPaymentList_Detail_刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>cox</Name>
+      <Name>LSM_CalcPaymentList_Detail_刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LSM_CalcPaymentList_刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>cox</Name>
+      <Name>LSM_CalcPaymentList_刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>coxsp</Name>
+      <Name>LSM_InvoiceRelateSrcDocument_刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>coxsp</Name>
+      <Name>LSM_InvoiceRelateSrcDocument_刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>coxsp</Name>
+      <Name>LSM_AddDeliveryItemFromInvoice_刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>coxsp</Name>
+      <Name>LSM_AddDeliveryItemFromInvoice_刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlView, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>viewLSM_DocumentLinkInvoice_刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>DOCLOCK</Name>
+      <Name>ACTIVEYN</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlScalarFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>SDM_DisplayTripSheetDocumentStatus</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ACC_ACC_GetVoucherEntry_ForexForwardControl</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LSM_ScanEANBarcode_作廢</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>cox</Name>
+      <Name>LSM_ScanEANBarcode_作廢</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>TEMPDB_USELOG</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>dbo</Name>
+      <Name>TEMPDB_USELOG</Name>
+      <Name>CRT_UTC</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>PrintOutException</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>dbo</Name>
+      <Name>PrintOutException</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LSM_ScanStockNo_FillUpOrder</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlView</Name>
+      <Name>cox</Name>
+      <Name>viewLSM_ConsignShippingNoteItems</Name>
+      <Name>MS_DiagramPaneCount</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlView</Name>
+      <Name>cox</Name>
+      <Name>viewLSM_ConsignShippingNoteItems</Name>
+      <Name>MS_DiagramPane2</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlView</Name>
+      <Name>cox</Name>
+      <Name>viewLSM_ConsignShippingNoteItems</Name>
+      <Name>MS_DiagramPane1</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>coxsp</Name>
+      <Name>SP_練習_簡化</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>coxsp</Name>
+      <Name>ACC_CreateVoucher_SupportGRV_修正</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>coxsp</Name>
+      <Name>ACC_CreateVoucher_SupportGRV_修正</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>coxsp</Name>
+      <Name>SP_練習_簡化</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>TEMP1</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>tiptop</Name>
+      <Name>Report_AIMR615_StockAging_SelfCheck_刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>tiptop</Name>
+      <Name>Report_AIMR615_StockAging_SelfCheck_刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>tiptop</Name>
+      <Name>EIS_TestOutput</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>SysAttachFile_GetSourceDocumentID_刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>dbo</Name>
+      <Name>SysAttachFile_GetSourceDocumentID_刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>tiptop</Name>
+      <Name>EIS_TestOutput</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlScalarFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ASS_GetWarrantyVoidReport_刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>STDISTOR_SUP</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>STDISTOR_SUP</Name>
+      <Name>SUPPLR_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>STDISTOR_SUP</Name>
+      <Name>STDISTOR_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>STDISTOR_SUP</Name>
+      <Name>DIST_NO</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>STDISTOR_SUP</Name>
+      <Name>ACTIVEYN</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>STDISTOR_SUP</Name>
+      <Name>CRT_USER</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>STDISTOR_SUP</Name>
+      <Name>CRT_UTC</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>cox</Name>
+      <Name>ASS_GetWarrantyVoidReport_刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>鄉鎮市區代碼$</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>coxsp</Name>
+      <Name>INV_GetSoDocTypeByBarcodePrefix_臨時</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlView, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>viewDocumentBarcodePrefix</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlScalarFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>coxsp</Name>
+      <Name>INV_GetSoDocTypeByBarcodePrefix_臨時</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>STBOMHD</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDmlTrigger, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>STBOMHD_insert_update_trigger</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LSM_GetPrintLabelOption_IssuePackNo</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LSM_PrintPickingLabel_ByIssueNo</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>MJOBHD_MACH</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>MJOBHD_SEMI</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>MJOBHD_USER</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>MPRDHD</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlMultiStatementTableValuedFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>coxsp</Name>
+      <Name>INV_StockAge_GeorgeTest</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>STCLASS</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>STCLASS</Name>
+      <Name>DESCRIP</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>STCLASS</Name>
+      <Name>ORDERNUM</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>STCLASS</Name>
+      <Name>ACTIVEYN</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>STCLASS</Name>
+      <Name>CRT_USER</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>STCLASS</Name>
+      <Name>CRT_UTC</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDmlTrigger, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>STCLASS_delete_all_trigger</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDmlTrigger, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>STCLASS_insert_update_trigger</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlTableBase</Name>
+      <Name>cox</Name>
+      <Name>STCLASS</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>tiptop</Name>
+      <Name>Report_Annual_01_Receivable_TEST</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>SDM_Invoice_LinkCreditNote</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>cox</Name>
+      <Name>SDM_Invoice_LinkCreditNote</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>coxsp</Name>
+      <Name>INV_BARCODE_TypeTransfer_UndoBefore</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGCONACC</Name>
+      <Name>ACCOUNT_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGCONACC</Name>
+      <Name>ACCNO</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGCONACC</Name>
+      <Name>FEEKIND</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LGCONACC</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGCONACC</Name>
+      <Name>ACTIVEYN</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGCONACC</Name>
+      <Name>CRT_USER</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>LGCONACC</Name>
+      <Name>CRT_UTC</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlIndex, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LGCONACC</Name>
+      <Name>FK_LGCONACC_ACCOUNT_ID_to_ACCOUNT</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDmlTrigger, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LGCONACC_insert_update_trigger</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDmlTrigger, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LGCONACC_delete_all_trigger</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LSM_BI_Process_Time_Chart</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>SODATE</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>SRDATE</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>TTL_NETAMT</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>TTL_TAX</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>TTL_AMOUNT</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>ORDNOTE</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LGDELHD</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDmlTrigger, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LGDELHD_insert_update_trigger</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlMultiStatementTableValuedFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>coxsp</Name>
+      <Name>LSM_Contract_Draftitems</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LGCCMLN</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>TASK_PSIHD</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>TASK_PSIHD</Name>
+      <Name>MSG_SUBJECT</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>TASK_PSIHD</Name>
+      <Name>MSG_TEXT</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>TASK_PSIHD</Name>
+      <Name>SIG_TYPE</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>TASK_PSIHD</Name>
+      <Name>DLTYPE</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>TASK_PSIHD</Name>
+      <Name>ACTIVEYN</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>TASK_PSIHD</Name>
+      <Name>CRT_USER</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>TASK_PSIHD</Name>
+      <Name>CRT_UTC</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDmlTrigger, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>TASK_PSIHD_insert_update_trigger</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDmlTrigger, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>TASK_PSIHD_delete_all_trigger</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlTableBase</Name>
+      <Name>cox</Name>
+      <Name>TASK_PSIHD</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>TASK_PSILN</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>TASK_PSILN</Name>
+      <Name>TASK_PSIHD_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>TASK_PSILN</Name>
+      <Name>CONT_NAME</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>TASK_PSILN</Name>
+      <Name>CONT_EMAIL</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>TASK_PSILN</Name>
+      <Name>ACTIVEYN</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>TASK_PSILN</Name>
+      <Name>CRT_USER</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>cox</Name>
+      <Name>TASK_PSILN</Name>
+      <Name>CRT_UTC</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlIndex, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>TASK_PSILN</Name>
+      <Name>FK_TASK_PSILN_TASK_PSIHD_ID_to_TASK_PSIHD</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDmlTrigger, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>TASK_PSILN_delete_all_trigger</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDmlTrigger, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>TASK_PSILN_insert_update_trigger</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>Fleet_ShippingNote_GetStatement</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>NLog</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlView, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>viewSDM_QuotationItems_Prev</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LSM_DailyReport_DriverDeliveryList</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlScalarFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>coxsp</Name>
+      <Name>LSM_GetFeekindByDeliveryType</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlScalarFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>coxsp</Name>
+      <Name>LSM_IsDeliveryOrCollection</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlScalarFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2bsp</Name>
+      <Name>EC_VerifyPublishProduct</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>sysage</Name>
+      <Name>Report_BrandSales_RobinTest</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlMultiStatementTableValuedFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>INV_StockAge_YiChingTest</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>sysage</Name>
+      <Name>Report_AIMR615_StockAging</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>sysage</Name>
+      <Name>Report_StockProvision</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ACC_QueryDebtorAgeAnalysis</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>RPT_ACC_Statement_05_LogisticInvoices</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>cox</Name>
+      <Name>RPT_ACC_Statement_05_LogisticInvoices</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>RPT_ACC_Statement_06_LogisticCreditNotes</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>cox</Name>
+      <Name>RPT_ACC_Statement_06_LogisticCreditNotes</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>tiptop</Name>
+      <Name>Report_AXCR151_NetRealizableValueList</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlMultiStatementTableValuedFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>sysage</Name>
+      <Name>INV_AXCR151_NetRealizableValueList</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlMultiStatementTableValuedFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>tiptop</Name>
+      <Name>StockCountWithMarketPrice</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Select.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>tiptop</Name>
+      <Name>StockCountWithMarketPrice</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>coxsp</Name>
+      <Name>ACC_CreateDraftVoucher_ImportCost_RobinTest</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>EC_UpdateCROStatus</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>EC_UpdateOrderStatus</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2bsp</Name>
+      <Name>EC_SyncApis_CreateByCustom</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlMultiStatementTableValuedFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>PSI_DetailSalesInformation_RobinTest</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Select.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>cox</Name>
+      <Name>PSI_DetailSalesInformation_RobinTest</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlMultiStatementTableValuedFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>sysage</Name>
+      <Name>GetRelatedParty_Detail_刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Select.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>sysage</Name>
+      <Name>GetRelatedParty_Detail_刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>Files_George</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>Files_George2</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>Files_Kim</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>Files_Louis</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>Files_Louis2</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>Files_Robin</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>Files_Robin2</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>Files_Yiching</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>Messages_George</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>Messages_George2</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>Messages_Kim</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>Messages_Louis</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>Messages_Louis2</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>Messages_Robin</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>Messages_Robin2</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>Messages_Yiching</Name>
+    </SelectedItem>
+  </ExcludedSourceElements>
+  <ExcludedTargetElements>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDefaultConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>DF_BARCODES_IDNO</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>SYSIDNO</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPrimaryKeyConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>PK_SYSIDNO</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlUniqueConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>AK_IDENTIFIER_2_SYSIDNO</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDefaultConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>DF__tmp_ms_xx__ICON___02B4BD55</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDefaultConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>DF__tmp_ms_xx__ORDER__03A8E18E</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ASS_QueryPendingSwopouts_作廢</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ASS_QueryPendingCRO_作廢</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ASS_QueryOutstandingCROItems_作廢</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ASS_QueryCROItemsSendToSupplier_作廢</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ASS_QueryCROItemsAtSupplier_作廢</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ASS_QueryCROforCollection_作廢</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dev</Name>
+      <Name>TSQL問題01_預存參數改變Grouping條件</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>CMSMODULE</Name>
+      <Name>LAYOUTCO</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>CMSMODULE</Name>
+      <Name>CONTENT_TYPE</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>CMSMODULE</Name>
+      <Name>REF_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>CMSMODULE</Name>
+      <Name>ORDERNUM</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>CMSMODULE</Name>
+      <Name>ACTIVEYN</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPrimaryKeyConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>PK_CMSMODULE</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDefaultConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>DF__CMSMODULE__ACTIV__42A5F08F</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDefaultConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>DF__CMSMODULE__MOD_U__448E3901</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDefaultConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>DF__CMSMODULE__CHANG__45825D3A</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlCheckConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>CKC_ACTIVEYN_CMSMODUL</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>CMSMUGRP</Name>
+      <Name>ACTIVEYN</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPrimaryKeyConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>PK_CMSMUGRP</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDefaultConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>DF__CMSMUGRP__ACTIVE__3CED1739</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDefaultConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>DF__CMSMUGRP__MOD_UT__3ED55FAB</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDefaultConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>DF__CMSMUGRP__CHANGE__3FC983E4</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlCheckConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>CKC_ACTIVEYN_CMSMUGRP</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlCheckConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>CKC_MENUKIND_CMSMENU</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlForeignKeyConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>FK_CMSMENU_CMSMUGRP_ID_to_CMSMUGRP</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlIndex, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>CMSMENU</Name>
+      <Name>FK_CMSMENU_CMSMUGRP_ID_to_CMSMUGRP</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ACC_QueryIncomeStatementRaw</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlScalarFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>coxsp</Name>
+      <Name>ACC_CalaRete</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>coxsp</Name>
+      <Name>ACC_CalaRete</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>dbo</Name>
+      <Name>SysDB_GetStoredProcedureScript</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlScalarFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ACC_CalaRete</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>cox</Name>
+      <Name>ACC_CalaRete</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>cox</Name>
+      <Name>ACC_GetACTRANS_Link_DocID</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>cox</Name>
+      <Name>ACC_GetCurrentPeriodID</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>cox</Name>
+      <Name>ACC_GetPreviousPeriodID</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlScalarFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>ClearTsqlScript</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>dbo</Name>
+      <Name>ClearTsqlScript</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlScalarFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>RemoveLastChar</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>dbo</Name>
+      <Name>RemoveLastChar</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlMultiStatementTableValuedFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ACC_QueryControlAccountUndeposited</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dev</Name>
+      <Name>aDevTool_DBA_Create_Prevent_Delete_All</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>dev</Name>
+      <Name>aDevTool_DBA_Create_Prevent_Delete_All</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlMultiStatementTableValuedFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>INV_FaultyStockAgeAnalysis</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPartitionScheme, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPartitionFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>BarcodePartitionFunction</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>cox</Name>
+      <Name>ACC_GetVoucherEntry_ForexForwardControl</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>coxsp</Name>
+      <Name>INV_ScanItemBarcode_CreateWithoutDoc</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>coxsp</Name>
+      <Name>INV_ScanItemBarcode_DeleteWithoutDoc</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>coxsp</Name>
+      <Name>INV_Reverse_SupportGRV</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LSM_ScanEANBarcode_作廢</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>cox</Name>
+      <Name>LSM_ScanEANBarcode_作廢</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>TEMPDB_USELOG</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>dbo</Name>
+      <Name>TEMPDB_USELOG</Name>
+      <Name>CRT_UTC</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPrimaryKeyConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>PK_TEMPDB_USELOG</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDefaultConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>DF__TEMPDB_US__CRT_U__4EB923BE</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>coxsp</Name>
+      <Name>INV_ScanItemBarcode_SupplierSpOrder_Receive</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>coxsp</Name>
+      <Name>INV_ScanItemBarcode_SupplierSpOrder_ReceiveUndo</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dev</Name>
+      <Name>OutputLog</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlIndex, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ACCNTBAL_M</Name>
+      <Name>UIX_ACCNTBAL_M_PERIOD_ID_ACCOUNT_ID</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dev</Name>
+      <Name>補資料_批次儲存 Issue 的費用帳單</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>dev</Name>
+      <Name>補資料_批次儲存 Issue 的費用帳單</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>dev</Name>
+      <Name>補資料_Receive_Credit_from_Supplier_後未更新庫存</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>dev</Name>
+      <Name>補資料_修正產品主檔的_Category_關係檔</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>dev</Name>
+      <Name>補資料_列出_Internal_Order_中所有序號與_GRV_發票資訊</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>dev</Name>
+      <Name>補資料_檢查_Debtors_Control_帳號各期別餘額是否正確</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>dev</Name>
+      <Name>補資料_還原已拋轉_CreditNote_的資料</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>coxsp</Name>
+      <Name>ACC_CreateVoucher_SupportGRV_修正</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>coxsp</Name>
+      <Name>ACC_CreateVoucher_SupportGRV_修正</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>coxsp</Name>
+      <Name>SP_練習_簡化</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>coxsp</Name>
+      <Name>SP_練習_簡化</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>SysAttachFile_GetSourceDocumentID_刪除</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>鄉鎮市區代碼$</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>tiptop</Name>
+      <Name>EIS_TestOutput</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>tiptop</Name>
+      <Name>EIS_TestOutput</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlScalarFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>coxsp</Name>
+      <Name>INV_GetSoDocTypeByBarcodePrefix_臨時</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Deny.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>coxsp</Name>
+      <Name>INV_GetSoDocTypeByBarcodePrefix_臨時</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dev</Name>
+      <Name>aDevTool_Check_SET_NOCOUNT_ON_TEST</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>STBOMHD</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDmlTrigger, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>STBOMHD_insert_update_trigger</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LSM_GetPrintLabelOption_IssuePackNo</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LSM_PrintPickingLabel_ByIssueNo</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>MJOBHD_MACH</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>MJOBHD_SEMI</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>MJOBHD_USER</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>MPRDHD</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LGDELHD</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDmlTrigger, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LGDELHD_insert_update_trigger</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>SODATE</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>SRDATE</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>ECRGUSER_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>CUST_NO</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>CUSTOM_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>CUST_NAME</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>TTL_NETAMT</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>TTL_TAX</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>TTL_AMOUNT</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>DNAME</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>DTEL</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>DADDR1</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>DADDR2</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>DADDR3</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>DADDR4</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>ZIPCODE</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>ORDNOTE</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>APPDYN</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>APPVOU_USER</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>APPVOU_UTC</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>APPVOU_REASON</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>SORDERHD_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>ACTIVEYN</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>CRT_USER</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>CRT_UTC</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPrimaryKeyConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>PK_ECORDHD</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlForeignKeyConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>FK_ECORDHD_ECRGUSER_ID_to_ECRGUSER</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDefaultConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>DF__ECORDHD__ACTIVEY__2CB9DCCC</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDefaultConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>DF__ECORDHD__MOD_UTC__2EA2253E</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDefaultConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>DF__ECORDHD__CHANGE___2F964977</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlCheckConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>CKC_ACTIVEYN_ECORDHD</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlIndex, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>ECORDHD</Name>
+      <Name>FK_ECORDHD_ECRGUSER_ID_to_ECRGUSER</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDmlTrigger, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>ECORDHD_delete_all_trigger</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>ECORDLN</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDLN</Name>
+      <Name>ECORDHD_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDLN</Name>
+      <Name>STOCKNO</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDLN</Name>
+      <Name>STOCK_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDLN</Name>
+      <Name>QTY</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDLN</Name>
+      <Name>UNIT</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDLN</Name>
+      <Name>UNIT_PRICE</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDLN</Name>
+      <Name>NET_AMOUNT</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDLN</Name>
+      <Name>TAXCO</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDLN</Name>
+      <Name>TAX_ID</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDLN</Name>
+      <Name>TAX</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDLN</Name>
+      <Name>TTL_AMOUNT</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDLN</Name>
+      <Name>DESCRIP</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDLN</Name>
+      <Name>ACTIVEYN</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDLN</Name>
+      <Name>CRT_USER</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlExtendedProperty, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>SqlColumn</Name>
+      <Name>b2b</Name>
+      <Name>ECORDLN</Name>
+      <Name>CRT_UTC</Name>
+      <Name>MS_Description</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPrimaryKeyConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>PK_ECORDLN</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlForeignKeyConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>FK_ECORDLN_ECORDHD_ID_to_ECORDHD</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDefaultConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>DF__ECORDLN__ACTIVEY__382B8F78</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDefaultConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>DF__ECORDLN__CHANGE___3B07FC23</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDefaultConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>DF__ECORDLN__MOD_UTC__3A13D7EA</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlCheckConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>CKC_ACTIVEYN_ECORDLN</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlIndex, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>ECORDLN</Name>
+      <Name>FK_ECORDLN_ECORDHD_ID_to_ECORDHD</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDmlTrigger, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>ECORDLN_delete_all_trigger</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDmlTrigger, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>ECORDLN_insert_update_trigger</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>b2b</Name>
+      <Name>EC_GetCategory</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>EC_GetCategory</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>LGCCMLN</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlTable, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>NLog</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPrimaryKeyConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>PK_dbo.Log</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlDefaultConstraint, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>DF__NLog__Logged__45A58627</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>Fleet_ShippingNote_GetItems</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>cox</Name>
+      <Name>Fleet_ShippingNote_GetItems</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>dbo</Name>
+      <Name>NLog_AddEntry_p</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlPermissionStatement, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>Grant.Execute.Object</Name>
+      <Name>ERP_DataAccess</Name>
+      <Name>dbo</Name>
+      <Name>dbo</Name>
+      <Name>NLog_AddEntry_p</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>sysage</Name>
+      <Name>Report_AIMR615_StockAging</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>sysage</Name>
+      <Name>Report_StockProvision</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>cox</Name>
+      <Name>ACC_QueryDebtorAgeAnalysis</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>tiptop</Name>
+      <Name>Report_AXCR151_NetRealizableValueList</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlMultiStatementTableValuedFunction, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>sysage</Name>
+      <Name>INV_AXCR151_NetRealizableValueList</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>EC_UpdateCROStatus</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2b</Name>
+      <Name>EC_UpdateOrderStatus</Name>
+    </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlProcedure, Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>b2bsp</Name>
+      <Name>EC_SyncApis_CreateByCustom</Name>
+    </SelectedItem>
+  </ExcludedTargetElements>
+</SchemaComparison>

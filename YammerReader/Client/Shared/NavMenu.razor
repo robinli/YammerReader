@@ -1,0 +1,73 @@
+﻿@inject NavigationManager NavigationManager
+@inherits Library.CommonBlazorBase
+
+<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">YammerReader</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+        </div>
+        @foreach (var item in ListData)
+        {
+            @if (item.order_num < 100)
+            {
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" @onclick="@(()=>MenuItemClick(@item))">
+                        <span class="oi oi-inbox" aria-hidden="true"></span> @item.group_name
+                    </NavLink>
+                </div>
+            }
+            else
+            {
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" @onclick="@(()=>MenuItemClick(@item))">
+                        <span class="oi oi-folder" aria-hidden="true"></span> @item.group_name
+                    </NavLink>
+                </div>
+            }
+        }
+    </nav>
+</div>
+
+@code {
+    
+    private List<YammerGroup> ListData { get; set; } = new List<YammerGroup>();
+
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await RetrieveData();
+    }
+
+    private async Task RetrieveData()
+    {
+        string url = "Yammer/GetAllGroups";
+        List<YammerGroup> result = await base.PostAsJsonAsync<List<YammerGroup>>(url, null);
+
+        ListData = result;
+    }
+
+    private async Task MenuItemClick(YammerGroup group)
+    {
+        await Task.Delay(0);
+        NavigationManager.NavigateTo($"/GroupThreads/{group.id}", forceLoad : true, replace : false);
+    }
+}

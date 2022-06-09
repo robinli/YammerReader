@@ -1,0 +1,24 @@
+﻿@page "/"
+@inherits Library.CommonBlazorBase
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+<div class="list-group">
+@foreach (var item in ListData)
+{
+    @if (item.order_num < 100)
+    {
+        <a class="list-group-item list-group-item-action list-group-item-primary" href="/GroupThreads/@item.id">
+        @item.group_name
+        </a>
+    }
+    else
+    {
+        <a class="list-group-item list-group-item-action" href="/GroupThreads/@item.id">
+        @item.group_name
+        </a>
+    }  
+}
+</div>

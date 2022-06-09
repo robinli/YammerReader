@@ -1,0 +1,114 @@
+﻿@page "/GroupThreads/{group_id}"
+@inherits Library.CommonBlazorBase
+
+<PageTitle>@Model.Group.group_name</PageTitle>
+
+ 
+
+<div class="row">
+    <div class="col-lg-9">
+        <h1>@Model.Group.group_name</h1>
+    </div>
+    <div class="col-lg-3 text-right">
+        <button class="btn btn-secondary float-end"  @onclick="GetData">重新讀取</button>
+    </div>
+</div>
+
+@if (Model.ListData != null)
+{
+    @foreach (var item in Model.ListData)
+    {
+        <div class="card border-secondary mb-2">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-4">
+                    @item.sender_name
+                </div>
+                <div class="col-8 text-end">
+                    <h6 class="card-subtitle mt-1 text-muted">@item.created_at</h6>
+                </div>
+            </div>
+        </div>
+          @*<div class="card-header">@item.sender_name</div>*@
+          <div class="card-body text-secondary">
+            @*<h6 class="card-subtitle mb-2 text-muted">@item.created_at</h6>*@
+            <p class="card-text"><pre style="max-width:1000px;">@item.body</pre></p>
+            @if (item.thread_count > 0)
+            {
+                <button type="button" class="btn btn-outline-primary btn-sm @SetDisabled(item)" @onclick="(()=>RetrieveReplies(item))">
+                    <span class="oi oi-chat" aria-hidden="true"></span> 展開 @item.thread_count 筆
+                </button>
+            }
+            @*<a href="#" class="card-link">@item.attachments</a>*@
+            </div>
+        </div>
+        @*回覆*@
+        if (item.Replies != null)
+        {
+            @foreach (var replyitem in item.Replies)
+            {
+                <div class="card border-warning bg-warning bg-opacity-10 mb-1 w-75 ms-5">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-4">
+                                @replyitem.sender_name
+                            </div>
+                            <div class="col-8 text-end">
+                               <h6 class="card-subtitle mt-1 text-muted">@replyitem.created_at</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body border-warning">
+                        <p class="card-text"><pre style="max-width:1000px;">@replyitem.body</pre></p>   
+                    </div>
+                </div>
+            }
+
+        }
+
+        
+    }
+
+    <nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+        <li style="cursor:pointer" class="page-item @(Pager.PageIndex>1?"":"disabled")"><a class="page-link" @onclick="@(()=> RetrieveData(Pager.PageIndex-1))">前頁</a></li>
+        @if (Pager.PageIndex > 3)
+        {
+            <li style="cursor:pointer" class="page-item @(Pager.PageIndex>1?"":"disabled")"><a class="page-link" @onclick="@(()=> RetrieveData(1))">1</a></li>
+        }
+        @if (Pager.PageIndex > 4)
+        {
+            <li style="cursor:pointer" class="page-item disabled"><span class="page-link">...</span></li>
+        }
+        @if (Pager.PageIndex > 2 )
+        {
+            <li style="cursor:pointer" class="page-item"><a class="page-link" @onclick="@(()=> RetrieveData(Pager.PageIndex-2))">@(Pager.PageIndex-2)</a></li>            
+        }
+        @if (Pager.PageIndex > 1)
+        {
+            <li style="cursor:pointer" class="page-item"><a class="page-link" @onclick="@(()=> RetrieveData(Pager.PageIndex-1))">@(Pager.PageIndex-1)</a></li>            
+        }
+
+        <li style="cursor:pointer" class="page-item active"><span class="page-link">@Pager.PageIndex</span></li>
+        
+        @if (Pager.PageIndex + 1 <= Pager.TotalPage)
+        {
+            <li style="cursor:pointer" class="page-item"><a class="page-link" @onclick="@(()=> RetrieveData(Pager.PageIndex+1))">@(Pager.PageIndex+1)</a></li>            
+        }
+        @if (Pager.PageIndex + 2 <= Pager.TotalPage)
+        {
+            <li style="cursor:pointer" class="page-item"><a class="page-link" @onclick="@(()=> RetrieveData(Pager.PageIndex+2))">@(Pager.PageIndex+2)</a></li>            
+        }
+        @if (Pager.PageIndex + 4 <= Pager.TotalPage)
+        {
+            <li style="cursor:pointer" class="page-item disabled"><span class="page-link">...</span></li>
+        }
+        @if (Pager.PageIndex + 3 <= Pager.TotalPage)
+        {
+            <li style="cursor:pointer" class="page-item @(Pager.PageIndex * Pager.PageSize < Pager.AllCount?"":"disabled")"><a class="page-link" @onclick="@(()=> RetrieveData(Pager.TotalPage))">@Pager.TotalPage</a></li>
+        }
+        <li style="cursor:pointer" class="page-item @(Pager.PageIndex * Pager.PageSize < Pager.AllCount?"":"disabled")"><a class="page-link" @onclick="@(()=> RetrieveData(Pager.PageIndex+1))">次頁</a></li>
+    </ul>
+</nav>
+}
+ 
