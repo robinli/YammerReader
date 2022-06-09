@@ -27,21 +27,29 @@ namespace YammerReader.Server.Controllers
 
 
         [HttpPost]
-        [Route("QueryRootMessage")]
-        public async Task<List<YammerMessage>> QueryRootMessage(YammerFilter filter)
+        [Route("GetGroupThreads")]
+        public async Task<List<YammerMessage>> GetGroupThreads(YammerFilter filter)
         {
             YammerDAL dal = new YammerDAL();
-            List<YammerMessage> result = await dal.QueryRootMessage(filter);
+            List<YammerMessage> result = await dal.GetGroupThreads(filter);
             return result;
         }
 
         [HttpPost]
-        [Route("QueryThreadMessage")]
-        public async Task<List<YammerMessage>> QueryThreadMessage(YammerFilter filter)
+        [Route("GetThreadReplies")]
+        public async Task<List<YammerMessage>> GetThreadReplies(YammerFilter filter)
         {
             YammerDAL dal = new YammerDAL();
-            return await dal.QueryThreadMessage(filter?.thread_id!);
+            return await dal.GetThreadReplies(filter!.thread_id!);
         }
 
+        [HttpPost]
+        [Route("SingleThread")]
+        public async Task<YammerMessage> SingleThread(YammerFilter filter)
+        {
+            YammerDAL dal = new YammerDAL();
+            YammerMessage result = await dal.SingleThread(filter!.thread_id!);
+            return result;
+        }
     }
 }
