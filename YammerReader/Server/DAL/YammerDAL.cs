@@ -110,7 +110,7 @@ order by created_at asc";
             }
             YammerMessage returnThread = data![0];
             returnThread.Replies = new List<YammerMessage>();
-            for (int i = 1; i < data.Count-1; i++)
+            for (int i = 1; i < data.Count; i++)
             {
                 returnThread.Replies.Add(data[i]);
             }

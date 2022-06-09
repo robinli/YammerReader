@@ -9,11 +9,17 @@ public partial class Threads : CommonBlazorBase
 {
     [Parameter] public string? thread_id { get; set; }
 
+    public string ThreadName { get; set; } = "Thread name";
+
     private ListThreadsModel Model { get; set; } = new ListThreadsModel();
 
     private ThreadDisplay? threadDisplay { get; set; }
 
     protected override async Task OnInitializedAsync()
+    {
+        await RetrieveData(1);
+    }
+    protected override async Task OnParametersSetAsync()
     {
         await RetrieveData(1);
     }
@@ -31,6 +37,7 @@ public partial class Threads : CommonBlazorBase
         {
             return;
         }
+        ThreadName = result.group_name;
         Model.ListData = new List<YammerMessage>();
         Model.ListData.Add(result);
     }
