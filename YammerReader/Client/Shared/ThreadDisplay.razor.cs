@@ -6,6 +6,8 @@ namespace YammerReader.Client.Shared
 {
     public partial class ThreadDisplay : CommonBlazorBase
     {
+        [Inject] NavigationManager? NavigationManager { get; set; }
+
         [Parameter] public List<YammerMessage>? ListData { get; set; }
 
         private async Task RetrieveReplies(YammerMessage item)
@@ -20,6 +22,12 @@ namespace YammerReader.Client.Shared
         private string SetDisabled(YammerMessage item)
         {
             return (item.Replies != null ? "disabled" : "");
+        }
+
+        private async Task ThreadLinkClick(YammerMessage item)
+        {
+            await Task.Delay(0);
+            NavigationManager!.NavigateTo($"/Threads/{item.id}", forceLoad: false, replace: false);
         }
     }
 }
