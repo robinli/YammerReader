@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using System.Data;
 using System.Data.Common;
 using YammerReader.Shared;
 
@@ -65,7 +66,8 @@ and M.parent_id = ''";
             parms.Add("group_id", filter.group_id);
 
             List<YammerMessage> data = (await connection.QueryAsync<YammerMessage>(tsql, parms)).ToList();
-             
+            await GetMessageAttachments(data);
+            
             return data;
         }
 
@@ -84,6 +86,7 @@ order by thread_last_at asc";
             parms.Add("thread_id", thread_id);
 
             List<YammerMessage> data = (await connection.QueryAsync<YammerMessage>(tsql, parms)).ToList();
+            await GetMessageAttachments(data);
 
             return data;
         }
@@ -103,11 +106,11 @@ order by created_at asc";
             parms.Add("thread_id", thread_id);
 
             List<YammerMessage> data = (await connection.QueryAsync<YammerMessage>(tsql, parms)).ToList();
-
             if (data.Any() == false)
             {
                 return null;
             }
+            await GetMessageAttachments(data);
             YammerMessage returnThread = data![0];
             returnThread.Replies = new List<YammerMessage>();
             for (int i = 1; i < data.Count; i++)
@@ -115,6 +118,43 @@ order by created_at asc";
                 returnThread.Replies.Add(data[i]);
             }
             return returnThread;
+        }
+
+
+        private async Task GetMessageAttachments(List<YammerMessage>? messages)
+        {
+            await Task.Delay(0);
+            if(messages == null)
+            {
+                return;
+            }
+            //將 id 串接成一個字串
+            var rarray = (from m in messages select m.id);
+            string message_id = string.Join(",", rarray);
+
+            DbConnection connection = GetSqlConnection();
+            var procedure = "[dbo].[GetMessageAttachments]";
+            var parms = new DynamicParameters();
+            parms.Add("message_id", message_id);
+            var attachments = (await connection.QueryAsync<YammerFile>(procedure, parms, commandType: CommandType.StoredProcedure));
+            if(attachments.Any() == false)
+            {
+                return;
+            }
+            foreach (YammerFile file in attachments)
+            {
+                YammerMessage? msg = messages.FirstOrDefault(m => m.id.Equals(file.message_id));
+                if (msg == null)
+                {
+                    continue;
+                }
+                if (msg.AttachmentFiles == null)
+                {
+                    msg.AttachmentFiles = new List<YammerFile>();
+                }
+                msg.AttachmentFiles.Add(file);
+            }
+            return;
         }
     }
 }

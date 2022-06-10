@@ -8,7 +8,16 @@ namespace YammerReader.Shared
 {
     public class YammerMessage
     {
+        /// <summary>
+        /// 回覆的訊息
+        /// </summary>
         public List<YammerMessage>? Replies { get; set; }
+
+        /// <summary>
+        /// 附加檔案
+        /// </summary>
+        public List<YammerFile>? AttachmentFiles { get; set; }
+
 
         public string id { get; set; } = null!;
         public string replied_to_id { get; set; } = null!;
