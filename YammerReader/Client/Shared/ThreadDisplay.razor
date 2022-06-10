@@ -20,11 +20,18 @@
             <ul class="list-group list-group-flush">
             @if (item.AttachmentFiles != null)
             {
-                
                 foreach (var file in item.AttachmentFiles)
                 {
                     <li class="list-group-item">
+                    @if(CheckIsPicture(file.file_type))
+                    {
                         <img class="img-fluid img-thumbnail" src="@file.file_url" alt="Uploaded image: No description set. @file.file_name">
+                    }
+                    else
+                    {
+                        <a class="btn btn-outline-secondary" href="@file.file_url" target="_blank">
+                            <span class="oi oi-data-transfer-download" aria-hidden="true"></span> @file.file_name</a>
+                    }
                     </li>
                 }
             }
@@ -50,7 +57,7 @@
             @foreach (var replyitem in item.Replies)
             {
                 index++;
-                <div class="card border-warning bg-warning bg-opacity-10 mb-1 w-75 ms-5">
+                <div class="card border-warning bg-warning bg-opacity-10 mb-1 ms-5">
                     <div class="card-header">
                         <div class="row">
                             <div class="col-4">
@@ -70,8 +77,15 @@
                 
                             foreach (var file in replyitem.AttachmentFiles)
                             {
-                                <li class="list-group-item">
-                                    <img class="img-fluid img-thumbnail" src="@file.file_url" alt="Uploaded image: No description set. @file.file_name">
+                                <li class="list-group-item list-group-item-warning">
+                                    @if(CheckIsPicture(file.file_type))
+                                    {
+                                        <img class="img-fluid img-thumbnail" src="@file.file_url" alt="Uploaded image: No description set. @file.file_name">
+                                    }
+                                    else
+                                    {
+                                        <a class="btn btn-outline-secondary" href="@file.file_url" target="_blank">下載 @file.file_name</a>
+                                    }
                                 </li>
                             }
                         }

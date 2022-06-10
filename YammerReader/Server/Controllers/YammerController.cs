@@ -51,5 +51,30 @@ namespace YammerReader.Server.Controllers
             YammerMessage result = await dal.SingleThread(filter!.thread_id!);
             return result;
         }
+
+        [HttpGet]
+        [Route("GetPicture/dir/{user_code}/id/{file_id}/files/{file_name}")]
+        public IActionResult Get(string user_code, string file_id, string file_name)
+        {
+            Byte[] b = System.IO.File.ReadAllBytes($@"E:\WEB_SITE\YammerReader.bud4.net_uploaded_files\{user_code}\{file_name}");   // You can use your own method over here.         
+            if (CheckIsPicture(file_name))
+            {
+                return File(b, "image/jpeg");
+            }
+            return File(b, "application/octet-stream");
+        }
+
+        private bool CheckIsPicture(string file_name)
+        {
+            int idx = file_name.IndexOf('.');
+            if(idx < 1)
+            {
+                return false;
+            }
+            string file_type = file_name.Substring(idx + 1, file_name.Length - idx - 1);
+            string picture_file_types = "gif|jpeg|jpg|png";
+            return picture_file_types.Contains(file_type);
+        }
+
     }
 }
