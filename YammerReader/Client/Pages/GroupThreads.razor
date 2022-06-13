@@ -14,48 +14,5 @@
 
 <ThreadDisplay @ref="threadDisplay" ListData=@Model.ListData></ThreadDisplay>
 
-@if (Model.ListData != null)
-{
-    <nav aria-label="Page navigation">
-    <ul class="pagination justify-content-center">
-        <li style="cursor:pointer" class="page-item @(Pager.PageIndex>1?"":"disabled")"><a class="page-link" @onclick="@(()=> RetrieveData(Pager.PageIndex-1))">前頁</a></li>
-        @if (Pager.PageIndex > 3)
-        {
-            <li style="cursor:pointer" class="page-item @(Pager.PageIndex>1?"":"disabled")"><a class="page-link" @onclick="@(()=> RetrieveData(1))">1</a></li>
-        }
-        @if (Pager.PageIndex > 4)
-        {
-            <li style="cursor:pointer" class="page-item disabled"><span class="page-link">...</span></li>
-        }
-        @if (Pager.PageIndex > 2 )
-        {
-            <li style="cursor:pointer" class="page-item"><a class="page-link" @onclick="@(()=> RetrieveData(Pager.PageIndex-2))">@(Pager.PageIndex-2)</a></li>            
-        }
-        @if (Pager.PageIndex > 1)
-        {
-            <li style="cursor:pointer" class="page-item"><a class="page-link" @onclick="@(()=> RetrieveData(Pager.PageIndex-1))">@(Pager.PageIndex-1)</a></li>            
-        }
-
-        <li style="cursor:pointer" class="page-item active"><span class="page-link">@Pager.PageIndex</span></li>
-        
-        @if (Pager.PageIndex + 1 <= Pager.TotalPage)
-        {
-            <li style="cursor:pointer" class="page-item"><a class="page-link" @onclick="@(()=> RetrieveData(Pager.PageIndex+1))">@(Pager.PageIndex+1)</a></li>            
-        }
-        @if (Pager.PageIndex + 2 <= Pager.TotalPage)
-        {
-            <li style="cursor:pointer" class="page-item"><a class="page-link" @onclick="@(()=> RetrieveData(Pager.PageIndex+2))">@(Pager.PageIndex+2)</a></li>            
-        }
-        @if (Pager.PageIndex + 4 <= Pager.TotalPage)
-        {
-            <li style="cursor:pointer" class="page-item disabled"><span class="page-link">...</span></li>
-        }
-        @if (Pager.PageIndex + 3 <= Pager.TotalPage)
-        {
-            <li style="cursor:pointer" class="page-item @(Pager.PageIndex * Pager.PageSize < Pager.AllCount?"":"disabled")"><a class="page-link" @onclick="@(()=> RetrieveData(Pager.TotalPage))">@Pager.TotalPage</a></li>
-        }
-        <li style="cursor:pointer" class="page-item @(Pager.PageIndex * Pager.PageSize < Pager.AllCount?"":"disabled")"><a class="page-link" @onclick="@(()=> RetrieveData(Pager.PageIndex+1))">次頁</a></li>
-    </ul>
-</nav>
-}
+<Pager @ref="pagerLink" Model=@Model.Pager></Pager>
  
