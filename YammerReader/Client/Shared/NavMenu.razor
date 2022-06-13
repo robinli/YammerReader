@@ -10,6 +10,13 @@
     </div>
 </div>
 
+@*搜尋*@
+<div class="input-group">
+    <div class="input-group-text p-0" id="btnGroupAddon"><span class="oi oi-magnifying-glass" aria-hidden="true"></span></div>
+    <input type="text" class="form-control" placeholder="Search" @onchange="OnSearchChanged">
+</div>
+ 
+
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
     <nav class="flex-column">
         <div class="nav-item px-3">
@@ -23,7 +30,7 @@
             {                
                 <div class="nav-item px-3">
                     <NavLink class="nav-link" href="@GetUrl(item)" Match="NavLinkMatch.All">
-                        <span class="oi oi-inbox" aria-hidden="true"></span> @item.group_name
+                        <span class="oi oi-star" aria-hidden="true"></span> @item.group_name
                     </NavLink>
                 </div>
             }
@@ -66,9 +73,16 @@
             ListData = result;
         }        
     }
-    
+
     private string GetUrl(YammerGroup group)
     {
         return $"GroupThreads/{group.id}";
     }
+
+
+    private async Task OnSearchChanged(ChangeEventArgs e)
+    {
+        NavigationManager.NavigateTo($"Search/{e?.Value?.ToString()}");
+    }
+
 }
