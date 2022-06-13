@@ -37,6 +37,11 @@ public partial class Search : CommonBlazorBase
 
     private async Task RetrieveData(int pageIndex)
     {
+        if (string.IsNullOrEmpty(key_word))
+        {
+            return;
+        }
+
         Model.Pager.PageIndex = pageIndex;
 
         YammerFilter query = new YammerFilter()

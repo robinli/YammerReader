@@ -82,7 +82,11 @@
 
     private async Task OnSearchChanged(ChangeEventArgs e)
     {
-        NavigationManager.NavigateTo($"Search/{e?.Value?.ToString()}");
+        var key_word = e?.Value.ToString();
+        if (string.IsNullOrEmpty(key_word) == false)
+        {
+            NavigationManager.NavigateTo($"Search/{e?.Value?.ToString()}");
+        }
     }
 
 }
