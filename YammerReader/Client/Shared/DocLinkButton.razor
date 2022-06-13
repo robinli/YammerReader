@@ -1,18 +1,19 @@
-﻿@{
+﻿@inject NavigationManager MyNavigationManager
+@{
     switch (file?.file_type)
     {
         case "xlsx":
-            <a class="btn btn-outline-success w-50" href="@file?.file_url" target="_blank">
+            <a class="btn btn-outline-success w-50" href="@GetUrl()" target="_blank">
                 <span class="docicon-excel" aria-hidden="true"></span> <br/> @file?.file_name</a>
             break;
 
          case "docx":    
-            <a class="btn btn-outline-info w-50" href="@file?.file_url" target="_blank">
+            <a class="btn btn-outline-info w-50" href="@GetUrl()" target="_blank">
             <span class="docicon-word" aria-hidden="true"></span> <br/> @file?.file_name</a>
             break;
          
          case "pptx":    
-            <a class="btn btn-outline-danger w-50" href="@file?.file_url" target="_blank">
+            <a class="btn btn-outline-danger w-50" href="@GetUrl()" target="_blank">
             <span class="docicon-powerpoint" aria-hidden="true"></span> <br/> @file?.file_name</a>
             break;
 
@@ -31,4 +32,9 @@
 
 @code{
     [Parameter] public YammerFile? file { get; set; }
+
+    private string GetUrl()
+    {
+        return $"https://view.officeapps.live.com/op/view.aspx?src={@MyNavigationManager.BaseUri}{file?.file_url}";
+    }
 }

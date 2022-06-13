@@ -63,7 +63,7 @@ namespace YammerReader.Server.Controllers
             }
             
             string fileType = GetFileType(file_name);
-            string office_file_types = "xlsx|docx|pptx|pdf";
+            string office_file_types = "pdf";
             if(office_file_types.Contains(fileType))
             {
                 return File(b, $"Application/{fileType}");

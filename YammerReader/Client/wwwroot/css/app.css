@@ -70,8 +70,8 @@ a, .btn-link {
     width: 48px;
     height: 48px;
     object-fit: cover;
-    background: url(images/Excel-icon.png); 
-    background-size: cover; 
+    background: url(/images/Excel-icon.png);
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -82,7 +82,7 @@ a, .btn-link {
     width: 48px;
     height: 48px;
     object-fit: cover;
-    background: url(images/Word-icon.png);
+    background: url(/images/Word-icon.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -94,7 +94,7 @@ a, .btn-link {
     width: 48px;
     height: 48px;
     object-fit: cover;
-    background: url(images/PowerPoint-icon.png);
+    background: url(/images/PowerPoint-icon.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -106,7 +106,7 @@ a, .btn-link {
     width: 48px;
     height: 48px;
     object-fit: cover;
-    background: url(../images/pdf-icon.png);
+    background: url(/images/pdf-icon.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -118,7 +118,7 @@ a, .btn-link {
     width: 48px;
     height: 48px;
     object-fit: cover;
-    background: url(../Document-Blank-icon.png);
+    background: url(/Document-Blank-icon.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
