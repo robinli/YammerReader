@@ -17,6 +17,24 @@
         </div>
           <div class="card-body text-secondary">
             <pre style="max-width:1000px;">@item.body</pre>
+            <ul class="list-group list-group-flush">
+            @if (item.AttachmentFiles != null)
+            {
+                foreach (var file in item.AttachmentFiles)
+                {
+                    <li class="list-group-item">
+                    @if(CheckIsPicture(file.file_type))
+                    {
+                        <img class="img-fluid img-thumbnail" src="@file.file_url" alt="Uploaded image: No description set. @file.file_name">
+                    }
+                    else
+                    {
+                        <DocLinkButton file="@file" />
+                    }
+                    </li>
+                }
+            }
+            <li class="list-group-item">
             @if (item.thread_count > 0)
             {
                 <button type="button" class="btn btn-outline-primary btn-sm @SetDisabled(item)" @onclick="(()=>RetrieveReplies(item))">
@@ -26,7 +44,8 @@
            
             <a class="btn btn-outline-primary btn-sm ms-1" @onclick="(()=>ThreadLinkClick(item))">
                 <span class="oi oi-link-intact" aria-hidden="true"></span> 單一連結</a>
-                
+            </li>
+            </ul> 
             @*<a href="#" class="card-link">@item.attachments</a>*@
             </div>
         </div>
@@ -37,7 +56,7 @@
             @foreach (var replyitem in item.Replies)
             {
                 index++;
-                <div class="card border-warning bg-warning bg-opacity-10 mb-1 w-75 ms-5">
+                <div class="card border-warning bg-warning bg-opacity-10 mb-1 ms-5">
                     <div class="card-header">
                         <div class="row">
                             <div class="col-4">
@@ -51,6 +70,25 @@
                     </div>
                     <div class="card-body border-warning pb-0">
                         <pre style="max-width:1000px;">@replyitem.body</pre>
+                        <ul class="list-group list-group-flush">
+                        @if (replyitem.AttachmentFiles != null)
+                        {
+                
+                            foreach (var file in replyitem.AttachmentFiles)
+                            {
+                                <li class="list-group-item list-group-item-warning">
+                                    @if(CheckIsPicture(file.file_type))
+                                    {
+                                        <img class="img-fluid img-thumbnail" src="@file.file_url" alt="Uploaded image: No description set. @file.file_name">
+                                    }
+                                    else
+                                    {
+                                        <a class="btn btn-outline-secondary" href="@file.file_url" target="_blank">下載 @file.file_name</a>
+                                    }
+                                </li>
+                            }
+                        }
+                        </ul>
                     </div>
                 </div>
             }

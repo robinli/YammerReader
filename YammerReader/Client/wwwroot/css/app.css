@@ -62,3 +62,64 @@ a, .btn-link {
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+
+
+.docicon-excel {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    background: url(images/Excel-icon.png); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.docicon-word {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    background: url(images/Word-icon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.docicon-powerpoint {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    background: url(images/PowerPoint-icon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.docicon-pdf {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    background: url(../images/pdf-icon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.docicon-other {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    background: url(../Document-Blank-icon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

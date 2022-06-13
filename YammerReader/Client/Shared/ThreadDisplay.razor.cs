@@ -29,5 +29,11 @@ namespace YammerReader.Client.Shared
             await Task.Delay(0);
             NavigationManager!.NavigateTo($"/Threads/{item.id}", forceLoad: false, replace: false);
         }
+
+        private bool CheckIsPicture(string file_type)
+        {
+            string picture_file_types = "gif|jpeg|jpg|png";
+            return picture_file_types.Contains(file_type);
+        }
     }
 }
