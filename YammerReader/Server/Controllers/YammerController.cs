@@ -61,19 +61,32 @@ namespace YammerReader.Server.Controllers
             {
                 return File(b, "image/jpeg");
             }
+            
+            string fileType = GetFileType(file_name);
+            string office_file_types = "xlsx|docx|pptx|pdf";
+            if(office_file_types.Contains(fileType))
+            {
+                return File(b, $"Application/{fileType}");
+            }
+
             return File(b, "application/octet-stream");
         }
 
         private bool CheckIsPicture(string file_name)
         {
+            string file_type = GetFileType(file_name);
+            string picture_file_types = "gif|jpeg|jpg|png";
+            return picture_file_types.Contains(file_type);
+        }
+
+        private string GetFileType(string file_name)
+        {
             int idx = file_name.IndexOf('.');
             if(idx < 1)
             {
-                return false;
+                return "";
             }
-            string file_type = file_name.Substring(idx + 1, file_name.Length - idx - 1);
-            string picture_file_types = "gif|jpeg|jpg|png";
-            return picture_file_types.Contains(file_type);
+            return file_name.Substring(idx + 1, file_name.Length - idx - 1);
         }
 
     }
