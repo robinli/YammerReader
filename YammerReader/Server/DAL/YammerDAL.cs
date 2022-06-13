@@ -51,6 +51,8 @@ order by order_num";
 
         public async Task<List<YammerMessage>> GetGroupThreads(YammerFilter filter)
         {
+            string group_id = filter!.group_id!;
+
             DbConnection connection = GetSqlConnection();
             string selectSql = $@"select id, replied_to_id, parent_id, thread_id
 , group_id, group_name, sender_id, sender_name
@@ -63,7 +65,7 @@ and M.parent_id = ''";
             string tsql = GetSqlforPaging(selectSql, orderbySql, filter);
 
             var parms = new DynamicParameters();
-            parms.Add("group_id", filter.group_id);
+            parms.Add("group_id", group_id);
 
             List<YammerMessage> data = (await connection.QueryAsync<YammerMessage>(tsql, parms)).ToList();
             await GetMessageAttachments(data);
@@ -120,6 +122,29 @@ order by created_at asc";
             return returnThread;
         }
 
+        public async Task<List<YammerMessage>> Search(YammerFilter filter)
+        {
+            string search_keyword = $"%{filter!.search_keyword!}%";
+
+            DbConnection connection = GetSqlConnection();
+            string selectSql = $@"select id, replied_to_id, parent_id, thread_id
+, group_id, group_name, sender_id, sender_name
+, body, attachments, created_at, thread_count, thread_last_at 
+from dbo.viewMessages M
+where M.body like @search_keyword
+and M.parent_id = ''";
+            string orderbySql = "thread_last_at desc";
+
+            string tsql = GetSqlforPaging(selectSql, orderbySql, filter);
+
+            var parms = new DynamicParameters();
+            parms.Add("search_keyword", search_keyword);
+
+            List<YammerMessage> data = (await connection.QueryAsync<YammerMessage>(tsql, parms)).ToList();
+            await GetMessageAttachments(data);
+
+            return data;
+        }
 
         private async Task GetMessageAttachments(List<YammerMessage>? messages)
         {

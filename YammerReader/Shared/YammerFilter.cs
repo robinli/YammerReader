@@ -13,5 +13,7 @@ namespace YammerReader.Shared
         public string? group_id { get; set; }
 
         public string? thread_id { get; set; }
+
+        public string? search_keyword { get; set; }
     }
 }

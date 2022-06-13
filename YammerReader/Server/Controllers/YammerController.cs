@@ -52,9 +52,19 @@ namespace YammerReader.Server.Controllers
             return result;
         }
 
+        [HttpPost]
+        [Route("Search")]
+        public async Task<List<YammerMessage>> Search(YammerFilter filter)
+        {
+            YammerDAL dal = new YammerDAL();
+            List<YammerMessage> result = await dal.Search(filter);
+            return result;
+        }
+
+        #region 下載圖片, 檔案
         [HttpGet]
         [Route("GetPicture/dir/{user_code}/id/{file_id}/files/{file_name}")]
-        public IActionResult Get(string user_code, string file_id, string file_name)
+        public IActionResult GetPicture(string user_code, string file_id, string file_name)
         {
             Byte[] b = System.IO.File.ReadAllBytes($@"E:\WEB_SITE\YammerReader.bud4.net_uploaded_files\{user_code}\{file_name}");   // You can use your own method over here.         
             if (CheckIsPicture(file_name))
@@ -88,6 +98,6 @@ namespace YammerReader.Server.Controllers
             }
             return file_name.Substring(idx + 1, file_name.Length - idx - 1);
         }
-
+        #endregion
     }
 }
