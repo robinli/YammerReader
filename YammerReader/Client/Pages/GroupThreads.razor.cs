@@ -13,8 +13,7 @@ namespace YammerReader.Client.Pages
         private ListThreadsModel Model { get; set; } = new ListThreadsModel();
 
         private ThreadDisplay? threadDisplay { get; set; }
-
-        private PagerDto Pager = new PagerDto { PageIndex = 1, PageSize = 10 };
+        private Pager? pagerLink { get; set; }
 
         private async Task GetData()
         {
@@ -24,6 +23,11 @@ namespace YammerReader.Client.Pages
         protected override async Task OnInitializedAsync()
         {
             await RetrieveData(1);
+
+            pagerLink!.PageTo = (async (int pageIndex) =>
+            {
+                await RetrieveData(pageIndex);
+            });
         }
 
         protected override async Task OnParametersSetAsync()
@@ -33,13 +37,13 @@ namespace YammerReader.Client.Pages
 
         private async Task RetrieveData(int pageIndex)
         {
-            Pager.PageIndex = pageIndex;
+            Model.Pager.PageIndex = pageIndex;
 
             YammerFilter query = new YammerFilter()
             {
                 group_id = group_id,
-                PageIndex = Pager.PageIndex,
-                PageSize = Pager.PageSize
+                PageIndex = Model.Pager.PageIndex,
+                PageSize = Model.Pager.PageSize
             };
 
             Model.Group = await base.PostAsJsonAsync<YammerGroup>("Yammer/GetGroup", query);
@@ -47,7 +51,9 @@ namespace YammerReader.Client.Pages
             List<YammerMessage>? result = await base.PostAsJsonAsync<List<YammerMessage>>("Yammer/GetGroupThreads", query);
             
             Model.ListData = result;
-            Pager.AllCount = result[0].ttlrows;
+            YammerMessage? firstMessage = result?.FirstOrDefault();
+            Model.Pager.AllCount = (firstMessage != null ? firstMessage.ttlrows : 0);
+            StateHasChanged();
         }
     }
 }

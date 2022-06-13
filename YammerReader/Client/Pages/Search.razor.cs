@@ -9,13 +9,11 @@ namespace YammerReader.Client.Pages;
 public partial class Search : CommonBlazorBase
 {
     [Parameter] public string? key_word { get; set; }
-    private int TotalRows { get; set; }
 
     private ListThreadsModel Model { get; set; } = new ListThreadsModel();
 
     private ThreadDisplay? threadDisplay { get; set; }
-
-    private PagerDto Pager = new PagerDto { PageIndex = 1, PageSize = 10 };
+    private Pager? pagerLink { get; set; }
 
     private async Task GetData()
     {
@@ -25,6 +23,11 @@ public partial class Search : CommonBlazorBase
     protected override async Task OnInitializedAsync()
     {
         await RetrieveData(1);
+
+        pagerLink!.PageTo = (async (int pageIndex) =>
+        {
+            await RetrieveData(pageIndex);
+        });
     }
 
     protected override async Task OnParametersSetAsync()
@@ -34,23 +37,21 @@ public partial class Search : CommonBlazorBase
 
     private async Task RetrieveData(int pageIndex)
     {
-        Pager.PageIndex = pageIndex;
+        Model.Pager.PageIndex = pageIndex;
 
         YammerFilter query = new YammerFilter()
         {
             search_keyword = key_word,
-            PageIndex = Pager.PageIndex,
-            PageSize = Pager.PageSize
+            PageIndex = Model.Pager.PageIndex,
+            PageSize = Model.Pager.PageSize
         };
 
         List<YammerMessage>? result = await base.PostAsJsonAsync<List<YammerMessage>>("Yammer/Search", query);
-        if (result != null && result!.Any())
-        {
-            Model.ListData = result;
-            TotalRows = result[0].ttlrows;
-            Pager.AllCount = TotalRows;
-        }
-
+        
+        Model.ListData = result;
+        YammerMessage? firstMessage = result?.FirstOrDefault();
+        Model.Pager.AllCount = (firstMessage != null ? firstMessage.ttlrows : 0);
+        StateHasChanged();
     }
 }
 

@@ -1,8 +1,8 @@
 ﻿namespace YammerReader.Client.DataModel
 {
-    public class PagerDto
+    public class PagerModel
     {
-        public PagerDto()
+        public PagerModel()
         {
             this.PageIndex = 1;
             this.PageSize = 10;
