@@ -174,25 +174,24 @@ order by created_at asc";
 
         public async Task<List<YammerMessage>> Search(YammerFilter filter)
         {
-            string search_keyword = filter!.search_keyword!;
-
-            long n;
-            bool isNumeric = long.TryParse(search_keyword, out n);
-            if (isNumeric)
-            {
-                YammerMessage singleThread = await SingleThread(search_keyword);
-                List<YammerMessage> returnMessages = new List<YammerMessage>();
-                returnMessages.Add(singleThread);
-                return returnMessages;
-            }
-            search_keyword = $"%{search_keyword}%";
-
+            string pure_keyword = filter!.search_keyword!;
+            string search_keyword = $"%{pure_keyword}%";
+            
             DbConnection connection = GetSqlConnection();
-            string selectSql = $@"select id, replied_to_id, parent_id, thread_id, thread_line_no
+
+            /*查詢 第一階 資料*/
+            string selectSql = $@"select id, replied_to_id, parent_id, M.thread_id, thread_line_no
 , group_id, group_name, sender_id, sender_name
-, body, attachments, created_at, thread_count, thread_last_at 
+, body, attachments, created_at, thread_count, thread_last_at
+, P1.match_rows
 from dbo.viewMessages M
-where M.body like @search_keyword ";
+inner join(
+	select thread_id, match_rows=count(1)
+	from dbo.Messages m0
+	where m0.body like @search_keyword
+	group by thread_id
+) P1
+	on P1.thread_id=M.id";
 
             string orderbySql = "thread_last_at desc";
 
@@ -200,14 +199,38 @@ where M.body like @search_keyword ";
 
             var parms = new DynamicParameters();
             parms.Add("search_keyword", search_keyword);
-            
             List<YammerMessage> data = (await connection.QueryAsync<YammerMessage>(tsql, parms)).ToList();
-            await GetMessageAttachments(data);
-            
-            //將相同討論串合併
 
+            /*查詢 回覆 資料*/
+            foreach(YammerMessage item in data)
+            {
+                //TODO 如何 High light 關鍵字
+                //item.body = item.body.Replace(pure_keyword, $"***{pure_keyword}***");
 
-
+                string selectReplySql = @"select id, replied_to_id, parent_id, thread_id, thread_line_no
+, group_id, group_name, sender_id, sender_name
+, body, attachments, created_at
+from dbo.Messages m0
+where thread_id = @thread_id
+and m0.body like @search_keyword
+and parent_id<>''";
+                
+                var replyParms = new DynamicParameters();
+                replyParms.Add("thread_id", item.thread_id);
+                replyParms.Add("search_keyword", search_keyword);
+                List<YammerMessage> replyData = (await connection.QueryAsync<YammerMessage>(selectReplySql, replyParms)).ToList();
+                foreach(YammerMessage reply in replyData)
+                {
+                    if (item.Replies == null)
+                    {
+                        item.Replies = new List<YammerMessage>();
+                    }
+                    //TODO 如何 High light 關鍵字
+                    //reply.body = reply.body.Replace(pure_keyword, $"***{pure_keyword}***");
+                    item.Replies.Add(reply);
+                }
+            }
+            //await GetMessageAttachments(data);
             return data;
         }
 
