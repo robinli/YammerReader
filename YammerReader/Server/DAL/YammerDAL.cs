@@ -157,7 +157,7 @@ and M.parent_id = ''";
         private async Task GetMessageAttachments(List<YammerMessage>? messages)
         {
             await Task.Delay(0);
-            if(messages == null)
+            if(messages == null || messages.Any()==false)
             {
                 return;
             }
