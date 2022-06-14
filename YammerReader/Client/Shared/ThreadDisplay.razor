@@ -1,4 +1,5 @@
-﻿@inherits Library.CommonBlazorBase
+﻿@inject NavigationManager MyNavigater
+@inherits Library.CommonBlazorBase
 
 @if (ListData != null)
 {
@@ -34,12 +35,14 @@
                     </li>
                 }
             }
-            <li class="list-group-item">
-            <a class="btn btn-outline-primary btn-sm ms-1" @onclick="(()=>ThreadLinkClick(item))">
-                <span class="oi oi-link-intact" aria-hidden="true"></span> 單一連結</a>
-            </li>
+            @if (MyNavigater.Uri.Contains("/Threads/") == false)
+            {
+                <li class="list-group-item">
+                    <a class="btn btn-outline-primary btn-sm ms-1" @onclick="(()=>ThreadLinkClick(item))">
+                    <span class="oi oi-link-intact" aria-hidden="true"></span> View Conversation</a>
+                </li>
+            }
             </ul> 
-            @*<a href="#" class="card-link">@item.attachments</a>*@
             </div>
         </div>
         @*讀取之前的回覆按鈕*@
@@ -47,7 +50,7 @@
         {
             <div class="card border-secondary bg-secondary bg-opacity-10 mb-1 ms-5">
                 <div class="card-header">
-                    <button type="button" class="btn btn-outline-primary btn-sm @SetDisabled(item)" @onclick="(()=>RetrieveReplies(item))">
+                    <button type="button" class="btn btn-outline-secondary btn-sm @SetDisabled(item)" @onclick="(()=>RetrieveReplies(item))">
                         <span class="oi oi-chat" aria-hidden="true"></span> Show @item.CountPrevoiusReplies() previous replies
                     </button>
                 </div>
@@ -56,15 +59,13 @@
         @*回覆*@
         if (item.Replies != null)
         {
-            int index = 0;
             @foreach (var replyitem in item.Replies.OrderBy(m=>m.created_at))
             {
-                index++;
                 <div class="card border-warning bg-warning bg-opacity-10 mb-1 ms-5">
                     <div class="card-header">
                         <div class="row">
                             <div class="col-4">
-                                <span class="badge bg-warning rounded-pill">@index</span>
+                                <span class="badge bg-warning rounded-pill">@replyitem.thread_line_no</span>
                                 @replyitem.sender_name
                             </div>
                             <div class="col-8 text-end">

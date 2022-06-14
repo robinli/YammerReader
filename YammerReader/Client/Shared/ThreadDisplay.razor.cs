@@ -14,7 +14,8 @@ namespace YammerReader.Client.Shared
         {
             YammerFilter query = new YammerFilter()
             {
-                thread_id = item.thread_id
+                thread_id = item.thread_id,
+                offect_rows = (item.Replies==null ? 0 : item.Replies.Count)
             };
             List<YammerMessage>? replyMessages = await base.PostAsJsonAsync<List<YammerMessage>>("Yammer/GetThreadReplies", query);
             if(replyMessages == null || replyMessages.Any() == false)
@@ -43,7 +44,7 @@ namespace YammerReader.Client.Shared
         private async Task ThreadLinkClick(YammerMessage item)
         {
             await Task.Delay(0);
-            NavigationManager!.NavigateTo($"/Threads/{item.id}", forceLoad: false, replace: false);
+            NavigationManager!.NavigateTo($"/Threads/{item.thread_id}", forceLoad: false, replace: false);
         }
 
         private bool CheckIsPicture(string file_type)

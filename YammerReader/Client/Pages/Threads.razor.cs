@@ -10,6 +10,7 @@ public partial class Threads : CommonBlazorBase
     [Parameter] public string? thread_id { get; set; }
 
     public string ThreadName { get; set; } = "Thread name";
+    public int TotalRows { get; set; }
 
     private ListThreadsModel Model { get; set; } = new ListThreadsModel();
 
@@ -31,14 +32,17 @@ public partial class Threads : CommonBlazorBase
             thread_id = thread_id
         };
 
-        YammerMessage? result = await base.PostAsJsonAsync<YammerMessage>("Yammer/SingleThread", query);
+        YammerMessage? result = await base.PostAsJsonAsync<YammerMessage?>("Yammer/SingleThread", query);
 
         if(result == null)
         {
+            ThreadName = $"0 total results for {thread_id}";
             return;
         }
+
         ThreadName = result.group_name;
         Model.ListData = new List<YammerMessage>();
         Model.ListData.Add(result);
+        TotalRows = 1;
     }
 }

@@ -54,7 +54,7 @@ order by order_num";
             string group_id = filter!.group_id!;
 
             DbConnection connection = GetSqlConnection();
-            string selectSql = $@"select id, replied_to_id, parent_id, thread_id
+            string selectSql = $@"select id, replied_to_id, parent_id, thread_id, thread_line_no
 , group_id, group_name, sender_id, sender_name
 , body, attachments, created_at, thread_count, thread_last_at 
 from dbo.viewMessages M
@@ -88,7 +88,7 @@ and M.parent_id = ''";
             }
 
             DbConnection connection = GetSqlConnection();
-            string tsql = $@"select top 2 id, replied_to_id, parent_id, thread_id
+            string tsql = $@"select top 2 id, replied_to_id, parent_id, thread_id, thread_line_no
 , group_id, group_name, sender_id, sender_name
 , body, attachments, created_at
 from dbo.viewMessages M
@@ -121,19 +121,20 @@ order by created_at desc";
             return ;
         }
 
-        public async Task<List<YammerMessage>> GetThreadReplies(string thread_id)
+        public async Task<List<YammerMessage>> GetThreadReplies(string thread_id, int offset_rows)
         {
             DbConnection connection = GetSqlConnection();
-            string tsql = $@"select id, replied_to_id, parent_id, thread_id
+            string tsql = $@"select id, replied_to_id, parent_id, thread_id, thread_line_no
 , group_id, group_name, sender_id, sender_name
 , body, attachments, created_at
 from dbo.viewMessages M
 where M.thread_id = @thread_id
 and M.parent_id<>''
 order by created_at desc
-OFFSET 2 ROWS";
+OFFSET @offset_rows ROWS";
             var parms = new DynamicParameters();
             parms.Add("thread_id", thread_id);
+            parms.Add("offset_rows", offset_rows);
 
             List<YammerMessage> data = (await connection.QueryAsync<YammerMessage>(tsql, parms)).ToList();
             await GetMessageAttachments(data);
@@ -144,7 +145,7 @@ OFFSET 2 ROWS";
         public async Task<YammerMessage?> SingleThread(string thread_id)
         {
             DbConnection connection = GetSqlConnection();
-            string tsql = $@"select id, replied_to_id, parent_id, thread_id
+            string tsql = $@"select id, replied_to_id, parent_id, thread_id, thread_line_no
 , group_id, group_name, sender_id, sender_name
 , body, attachments, created_at
 , thread_count = IIF(M.parent_id='', M.thread_count, 0)
@@ -155,11 +156,12 @@ order by created_at asc";
             var parms = new DynamicParameters();
             parms.Add("thread_id", thread_id);
 
-            List<YammerMessage> data = (await connection.QueryAsync<YammerMessage>(tsql, parms)).ToList();
-            if (data.Any() == false)
+            var queryResult = (await connection.QueryAsync<YammerMessage>(tsql, parms));
+            if (queryResult==null || queryResult.Any() == false)
             {
                 return null;
             }
+            List<YammerMessage> data= queryResult.ToList();
             await GetMessageAttachments(data);
             YammerMessage returnThread = data![0];
             returnThread.Replies = new List<YammerMessage>();
@@ -176,18 +178,21 @@ order by created_at asc";
 
             long n;
             bool isNumeric = long.TryParse(search_keyword, out n);
-            if (isNumeric==false)
+            if (isNumeric)
             {
-                search_keyword = $"%{search_keyword}%";
+                YammerMessage singleThread = await SingleThread(search_keyword);
+                List<YammerMessage> returnMessages = new List<YammerMessage>();
+                returnMessages.Add(singleThread);
+                return returnMessages;
             }
+            search_keyword = $"%{search_keyword}%";
 
             DbConnection connection = GetSqlConnection();
-            string selectSql = $@"select id, replied_to_id, parent_id, thread_id
+            string selectSql = $@"select id, replied_to_id, parent_id, thread_id, thread_line_no
 , group_id, group_name, sender_id, sender_name
 , body, attachments, created_at, thread_count, thread_last_at 
 from dbo.viewMessages M
-where {(isNumeric ? "M.id = @search_keyword" : "M.body like @search_keyword")}
-and M.parent_id = ''";
+where M.body like @search_keyword ";
 
             string orderbySql = "thread_last_at desc";
 
@@ -198,6 +203,10 @@ and M.parent_id = ''";
             
             List<YammerMessage> data = (await connection.QueryAsync<YammerMessage>(tsql, parms)).ToList();
             await GetMessageAttachments(data);
+            
+            //將相同討論串合併
+
+
 
             return data;
         }

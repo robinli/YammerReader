@@ -85,7 +85,17 @@
         var key_word = e?.Value.ToString();
         if (string.IsNullOrEmpty(key_word) == false)
         {
-            NavigationManager.NavigateTo($"Search/{e?.Value?.ToString()}");
+            long n;
+            bool isNumeric = long.TryParse(key_word, out n);
+            if (isNumeric)
+            {
+                NavigationManager.NavigateTo($"Threads/{key_word}");
+            }
+            else
+            {
+                NavigationManager.NavigateTo($"Search/{key_word}");
+            }
+            
         }
     }
 
