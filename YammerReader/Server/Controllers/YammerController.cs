@@ -40,15 +40,15 @@ namespace YammerReader.Server.Controllers
         public async Task<List<YammerMessage>> GetThreadReplies(YammerFilter filter)
         {
             YammerDAL dal = new YammerDAL();
-            return await dal.GetThreadReplies(filter!.thread_id!);
+            return await dal.GetThreadReplies(filter!.thread_id!, filter!.offect_rows);
         }
 
         [HttpPost]
         [Route("SingleThread")]
-        public async Task<YammerMessage> SingleThread(YammerFilter filter)
+        public async Task<YammerMessage?> SingleThread(YammerFilter filter)
         {
             YammerDAL dal = new YammerDAL();
-            YammerMessage result = await dal.SingleThread(filter!.thread_id!);
+            YammerMessage? result = await dal.SingleThread(filter!.thread_id!);
             return result;
         }
 

@@ -4,12 +4,15 @@
 <PageTitle>@ThreadName</PageTitle>
 
 <div class="row">
-    <div class="col-lg-9">
+    <div class="col-12">
         <h1>View Conversation</h1>
     </div>
-    <div class="col-lg-3 text-right">
-        
-    </div>
+    @if (Model.ListData == null)
+    {
+        <div class="col-12">
+            <h6>0 total results for <b>@thread_id</b></h6>
+        </div> 
+    }
 </div>
 
 <ThreadDisplay @ref="threadDisplay" ListData=@Model.ListData></ThreadDisplay>

@@ -14,6 +14,8 @@ namespace YammerReader.Shared
 
         public string? thread_id { get; set; }
 
+        public int offect_rows { get; set; }
+
         public string? search_keyword { get; set; }
     }
 }

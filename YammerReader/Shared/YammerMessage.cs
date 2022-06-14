@@ -23,6 +23,7 @@ namespace YammerReader.Shared
         public string replied_to_id { get; set; } = null!;
         public string parent_id { get; set; } = null!;
         public string thread_id { get; set; } = null!;
+        public int thread_line_no { get; set; }
         public string group_id { get; set; } = null!;
         public string group_name { get; set; } = null!;
         public string sender_id { get; set; } = null!; 
@@ -37,11 +38,17 @@ namespace YammerReader.Shared
 
         public int CountPrevoiusReplies()
         {
-            if (Replies == null) return 0;
-            
-            if(Replies.Any()==false) return 0;
+            if (parent_id != "")
+            {
+                return 0;
+            }
 
-            return thread_count - Replies.Count();
+            int replyCount = 0;
+            if (Replies != null && Replies.Any())
+            {
+                replyCount = Replies.Count();
+            }
+            return thread_count - replyCount;
         }
     }
 }

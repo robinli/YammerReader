@@ -59,6 +59,11 @@ namespace YammerReader.Client.Library
                 //ReadAsStringAsync 可以先讀出Json 再轉，比較好debug
                 //var result = await response.Content.ReadFromJsonAsync<T>();
                 string json = await response.Content.ReadAsStringAsync();
+                if (json =="")
+                {
+                    return default(T);
+                }
+
                 var result = JsonSerializer.Deserialize<T>(json);
 
                 if (result != null)
