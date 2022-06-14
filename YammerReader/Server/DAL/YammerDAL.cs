@@ -65,7 +65,7 @@ and M.parent_id = ''";
             string tsql = GetSqlforPaging(selectSql, orderbySql, filter);
 
             var parms = new DynamicParameters();
-            parms.Add("group_id", group_id);
+            parms.Add("group_id", group_id, dbType: DbType.String, size: 16);
 
             List<YammerMessage> data = (await connection.QueryAsync<YammerMessage>(tsql, parms)).ToList();
             await GetMessageAttachments(data);
@@ -124,22 +124,30 @@ order by created_at asc";
 
         public async Task<List<YammerMessage>> Search(YammerFilter filter)
         {
-            string search_keyword = $"%{filter!.search_keyword!}%";
+            string search_keyword = filter!.search_keyword!;
+
+            long n;
+            bool isNumeric = long.TryParse(search_keyword, out n);
+            if (isNumeric==false)
+            {
+                search_keyword = $"%{search_keyword}%";
+            }
 
             DbConnection connection = GetSqlConnection();
             string selectSql = $@"select id, replied_to_id, parent_id, thread_id
 , group_id, group_name, sender_id, sender_name
 , body, attachments, created_at, thread_count, thread_last_at 
 from dbo.viewMessages M
-where M.body like @search_keyword
+where {(isNumeric ? "M.id = @search_keyword" : "M.body like @search_keyword")}
 and M.parent_id = ''";
+
             string orderbySql = "thread_last_at desc";
 
             string tsql = GetSqlforPaging(selectSql, orderbySql, filter);
 
             var parms = new DynamicParameters();
             parms.Add("search_keyword", search_keyword);
-
+            
             List<YammerMessage> data = (await connection.QueryAsync<YammerMessage>(tsql, parms)).ToList();
             await GetMessageAttachments(data);
 
@@ -149,7 +157,7 @@ and M.parent_id = ''";
         private async Task GetMessageAttachments(List<YammerMessage>? messages)
         {
             await Task.Delay(0);
-            if(messages == null)
+            if(messages == null || messages.Any()==false)
             {
                 return;
             }

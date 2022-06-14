@@ -13,7 +13,7 @@
 @*搜尋*@
 <div class="input-group">
     <div class="input-group-text p-0" id="btnGroupAddon"><span class="oi oi-magnifying-glass" aria-hidden="true"></span></div>
-    <input type="text" class="form-control" placeholder="Search" @onchange="OnSearchChanged">
+    <input type="text" class="form-control" placeholder="keyword or id" @onchange="OnSearchChanged">
 </div>
  
 
@@ -82,7 +82,11 @@
 
     private async Task OnSearchChanged(ChangeEventArgs e)
     {
-        NavigationManager.NavigateTo($"Search/{e?.Value?.ToString()}");
+        var key_word = e?.Value.ToString();
+        if (string.IsNullOrEmpty(key_word) == false)
+        {
+            NavigationManager.NavigateTo($"Search/{e?.Value?.ToString()}");
+        }
     }
 
 }
