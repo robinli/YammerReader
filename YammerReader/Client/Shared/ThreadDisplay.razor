@@ -46,7 +46,7 @@
             </div>
         </div>
         @*讀取之前的回覆按鈕*@
-        @if (@item.CountPrevoiusReplies() > 0)
+        @if (MyNavigater.Uri.Contains("/Search/") == false && @item.CountPrevoiusReplies() > 0)
         {
             <div class="card border-secondary bg-secondary bg-opacity-10 mb-1 ms-5">
                 <div class="card-header">

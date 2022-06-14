@@ -36,6 +36,11 @@ namespace YammerReader.Shared
 
         public int ttlrows { get; set; }
 
+        /// <summary>
+        /// 討論串中符合 關鍵字 的筆數
+        /// </summary>
+        public int match_rows { get; set; }
+
         public int CountPrevoiusReplies()
         {
             if (parent_id != "")
