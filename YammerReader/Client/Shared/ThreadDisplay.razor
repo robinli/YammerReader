@@ -35,13 +35,6 @@
                 }
             }
             <li class="list-group-item">
-            @if (item.thread_count > 0)
-            {
-                <button type="button" class="btn btn-outline-primary btn-sm @SetDisabled(item)" @onclick="(()=>RetrieveReplies(item))">
-                    <span class="oi oi-chat" aria-hidden="true"></span> 展開 @item.thread_count 筆
-                </button>
-            }
-           
             <a class="btn btn-outline-primary btn-sm ms-1" @onclick="(()=>ThreadLinkClick(item))">
                 <span class="oi oi-link-intact" aria-hidden="true"></span> 單一連結</a>
             </li>
@@ -49,11 +42,22 @@
             @*<a href="#" class="card-link">@item.attachments</a>*@
             </div>
         </div>
+        @*讀取之前的回覆按鈕*@
+        @if (@item.CountPrevoiusReplies() > 0)
+        {
+            <div class="card border-secondary bg-secondary bg-opacity-10 mb-1 ms-5">
+                <div class="card-header">
+                    <button type="button" class="btn btn-outline-primary btn-sm @SetDisabled(item)" @onclick="(()=>RetrieveReplies(item))">
+                        <span class="oi oi-chat" aria-hidden="true"></span> Show @item.CountPrevoiusReplies() previous replies
+                    </button>
+                </div>
+            </div>
+        }
         @*回覆*@
         if (item.Replies != null)
         {
             int index = 0;
-            @foreach (var replyitem in item.Replies)
+            @foreach (var replyitem in item.Replies.OrderBy(m=>m.created_at))
             {
                 index++;
                 <div class="card border-warning bg-warning bg-opacity-10 mb-1 ms-5">

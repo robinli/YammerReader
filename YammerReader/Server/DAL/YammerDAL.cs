@@ -69,10 +69,57 @@ and M.parent_id = ''";
 
             List<YammerMessage> data = (await connection.QueryAsync<YammerMessage>(tsql, parms)).ToList();
             await GetMessageAttachments(data);
-            
+
+            await GetLastReplies(data);
+
             return data;
         }
 
+        /// <summary>
+        /// 讀取每一則討論串最後兩筆回覆
+        /// </summary>
+        /// <param name="thread_id"></param>
+        /// <returns></returns>
+        private async Task GetLastReplies(List<YammerMessage> data)
+        {
+            if (data == null || data.Any() == false)
+            {
+                return;
+            }
+
+            DbConnection connection = GetSqlConnection();
+            string tsql = $@"select top 2 id, replied_to_id, parent_id, thread_id
+, group_id, group_name, sender_id, sender_name
+, body, attachments, created_at
+from dbo.viewMessages M
+where M.thread_id = @thread_id
+and M.parent_id<>''
+order by created_at desc";
+
+            foreach(YammerMessage message in data)
+            {
+                //var parms = new DynamicParameters();
+                //parms.Add("thread_id", message.thread_id);
+                List<YammerMessage> replyMessage = (await connection.QueryAsync<YammerMessage>(tsql
+                    , new { thread_id = message.thread_id }
+                    )).ToList();
+
+                if (replyMessage.Any() == false)
+                {
+                    continue;
+                }
+
+                await GetMessageAttachments(replyMessage);
+
+                message.Replies = new List<YammerMessage>();
+                foreach (YammerMessage item in replyMessage)
+                {
+                    message.Replies.Add(item);
+                }
+            }
+
+            return ;
+        }
 
         public async Task<List<YammerMessage>> GetThreadReplies(string thread_id)
         {
@@ -83,7 +130,8 @@ and M.parent_id = ''";
 from dbo.viewMessages M
 where M.thread_id = @thread_id
 and M.parent_id<>''
-order by thread_last_at asc";
+order by created_at desc
+OFFSET 2 ROWS";
             var parms = new DynamicParameters();
             parms.Add("thread_id", thread_id);
 
@@ -93,7 +141,7 @@ order by thread_last_at asc";
             return data;
         }
 
-        public async Task<YammerMessage> SingleThread(string thread_id)
+        public async Task<YammerMessage?> SingleThread(string thread_id)
         {
             DbConnection connection = GetSqlConnection();
             string tsql = $@"select id, replied_to_id, parent_id, thread_id

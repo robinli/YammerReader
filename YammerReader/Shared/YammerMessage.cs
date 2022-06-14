@@ -34,5 +34,14 @@ namespace YammerReader.Shared
         public DateTime thread_last_at { get; set; }
 
         public int ttlrows { get; set; }
+
+        public int CountPrevoiusReplies()
+        {
+            if (Replies == null) return 0;
+            
+            if(Replies.Any()==false) return 0;
+
+            return thread_count - Replies.Count();
+        }
     }
 }

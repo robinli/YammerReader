@@ -16,12 +16,28 @@ namespace YammerReader.Client.Shared
             {
                 thread_id = item.thread_id
             };
-            item.Replies = await base.PostAsJsonAsync<List<YammerMessage>>("Yammer/GetThreadReplies", query);
+            List<YammerMessage>? replyMessages = await base.PostAsJsonAsync<List<YammerMessage>>("Yammer/GetThreadReplies", query);
+            if(replyMessages == null || replyMessages.Any() == false)
+            {
+                return;
+            }
+            foreach(YammerMessage reply in replyMessages)
+            {
+                if (item.Replies == null)
+                {
+                    item.Replies = new List<YammerMessage>();
+                }
+                //比對不重複才加入
+                if (item.Replies.Any(r => r.id.Equals(reply.id))==false) 
+                { 
+                    item.Replies.Add(reply); 
+                }
+            }
         }
 
         private string SetDisabled(YammerMessage item)
         {
-            return (item.Replies != null ? "disabled" : "");
+            return (item.CountPrevoiusReplies() == 0 ? "disabled" : "");
         }
 
         private async Task ThreadLinkClick(YammerMessage item)
