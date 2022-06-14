@@ -61,6 +61,7 @@
     <Folder Include="dbo\Tables\" />
     <Folder Include="dbo\Views\" />
     <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\Functions\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Compare_DB_vs_Source.scmp" />
@@ -72,5 +73,9 @@
     <Build Include="dbo\Tables\Files.sql" />
     <Build Include="dbo\Views\viewMessages.sql" />
     <Build Include="dbo\Stored Procedures\查詢範例.sql" />
+    <Build Include="dbo\Functions\MessageAttachments.sql" />
+    <Build Include="dbo\Functions\Split.sql" />
+    <Build Include="dbo\Stored Procedures\查詢所有附加檔案的類型.sql" />
+    <Build Include="dbo\Stored Procedures\GetMessageAttachments.sql" />
   </ItemGroup>
 </Project>

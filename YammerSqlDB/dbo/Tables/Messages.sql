@@ -28,3 +28,10 @@
     CONSTRAINT [PK_Messages] PRIMARY KEY CLUSTERED ([id] ASC)
 );
 
+
+
+
+GO
+CREATE NONCLUSTERED INDEX [idx_Messages_thread_id]
+    ON [dbo].[Messages]([thread_id] ASC);
+
