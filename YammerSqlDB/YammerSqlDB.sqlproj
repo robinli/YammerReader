@@ -77,5 +77,7 @@
     <Build Include="dbo\Functions\Split.sql" />
     <Build Include="dbo\Stored Procedures\查詢所有附加檔案的類型.sql" />
     <Build Include="dbo\Stored Procedures\GetMessageAttachments.sql" />
+    <Build Include="dbo\Functions\ReplaceUserIdToUserName.sql" />
+    <Build Include="dbo\Stored Procedures\查詢範例_Search.sql" />
   </ItemGroup>
 </Project>
