@@ -25,8 +25,11 @@
     [html_body]               NVARCHAR (MAX) NULL,
     [message_type]            NVARCHAR (255) NULL,
     [gdpr_delete_url]         NVARCHAR (255) NULL,
+    [thread_line_no]          INT            NULL,
     CONSTRAINT [PK_Messages] PRIMARY KEY CLUSTERED ([id] ASC)
 );
+
+
 
 
 

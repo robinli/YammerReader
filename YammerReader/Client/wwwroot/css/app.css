@@ -134,3 +134,11 @@ a, .btn-link {
     .yammer-message-body em {
         background-color: #ffe7b8;
     }
+
+    .yammer-message-body cc {
+        color: #6c757d;
+        display: block;
+        font-size: 14px;
+        font-style: italic;
+        padding-top: 8px;
+    }
