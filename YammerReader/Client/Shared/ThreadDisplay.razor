@@ -17,7 +17,7 @@
             </div>
         </div>
           <div class="card-body text-secondary">
-            <pre style="max-width:1000px;">@item.body</pre>
+            <div class="yammer-message-body">@((MarkupString)FormatContext(item.body))</div>
             <ul class="list-group list-group-flush">
             @if (item.AttachmentFiles != null)
             {
@@ -38,7 +38,7 @@
             @if (MyNavigater.Uri.Contains("/Threads/") == false)
             {
                 <li class="list-group-item">
-                    <a class="btn btn-outline-primary btn-sm ms-1" @onclick="(()=>ThreadLinkClick(item))">
+                    <a class="btn btn-outline-primary btn-sm" @onclick="(()=>ThreadLinkClick(item))">
                     <span class="oi oi-link-intact" aria-hidden="true"></span> View Conversation</a>
                 </li>
             }
@@ -73,8 +73,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card-body border-warning pb-0">
-                        <pre style="max-width:1000px;">@replyitem.body</pre>
+                    <div class="card-body border-warning pt-2 pb-2">
+                        <div class="yammer-message-body">@((MarkupString)FormatContext(replyitem.body))</div>
                         <ul class="list-group list-group-flush">
                         @if (replyitem.AttachmentFiles != null)
                         {

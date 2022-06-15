@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using System.Text;
 using YammerReader.Client.Library;
 using YammerReader.Shared;
 
@@ -51,6 +52,19 @@ namespace YammerReader.Client.Shared
         {
             string picture_file_types = "gif|jpeg|jpg|png";
             return picture_file_types.Contains(file_type);
+        }
+
+        private string FormatContext(string contextBody)
+        {
+            // 分行 \n
+            StringBuilder htmlText = new StringBuilder();
+
+            foreach(string line in contextBody.Split("\n"))
+            {
+                htmlText.AppendLine($"<p>{line}</p>");
+            }
+
+            return htmlText.ToString();
         }
     }
 }
