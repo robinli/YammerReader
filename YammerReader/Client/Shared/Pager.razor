@@ -45,8 +45,7 @@
 }
 @code {
     [Parameter] public DataModel.PagerModel Model { get; set; } = new DataModel.PagerModel();
-
-    public Action<int>? PageTo { get; set; }
+    [Parameter] public EventCallback<int> OnPageClicked { get; set; }
 
     protected override async Task OnParametersSetAsync()
     {
@@ -57,6 +56,6 @@
     {
         await Task.Delay(0);
         Model.PageIndex = pageIndex;
-        PageTo?.Invoke(pageIndex);
+        await OnPageClicked.InvokeAsync(pageIndex);
     }
 }

@@ -1,24 +1,25 @@
 ﻿@page "/"
 @inherits Library.CommonBlazorBase
 
-<PageTitle>Index issue 1</PageTitle>
+<PageTitle>Index</PageTitle>
 
 <h1>Select group</h1>
 
-<div class="list-group">
+<div class="row">
+  <div class="col col-lg-6 col-auto">
+    <div class="border rounded bg-secondary bg-opacity-10 m-0 p-3 shadow">
 @foreach (var item in ListData)
 {
     @if (item.order_num < 100)
     {
-        <a class="list-group-item list-group-item-action list-group-item-primary" href="/GroupThreads/@item.id">
-        @item.group_name
-        </a>
+        <a class="btn btn-outline-primary rounded m-2 shadow" href="/GroupThreads/@item.id">@item.group_name</a>
     }
     else
     {
-        <a class="list-group-item list-group-item-action" href="/GroupThreads/@item.id">
-        @item.group_name
-        </a>
-    }  
+        <a class="btn btn-outline-info rounded m-2 shadow" href="/GroupThreads/@item.id">@item.group_name</a>
+    } 
 }
+    </div>
+  </div>
 </div>
+

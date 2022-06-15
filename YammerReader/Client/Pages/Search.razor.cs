@@ -9,7 +9,6 @@ namespace YammerReader.Client.Pages;
 public partial class Search : CommonBlazorBase
 {
     [Parameter] public string? key_word { get; set; }
-    private string? saved_key_word { get; set; }
 
     private ListThreadsModel Model { get; set; } = new ListThreadsModel();
 
@@ -21,22 +20,14 @@ public partial class Search : CommonBlazorBase
         await RetrieveData(1);
     }
 
-    protected override async Task OnInitializedAsync()
-    {
-        await RetrieveData(1);
-
-        pagerLink!.PageTo = (async (int pageIndex) =>
-        {
-            await RetrieveData(pageIndex);
-        });
-    }
-
     protected override async Task OnParametersSetAsync()
     {
-        if(key_word != saved_key_word)
-        {
-            await RetrieveData(1);
-        }
+        await RetrieveData(1);
+    }
+
+    private async Task OnPageClicked(int pageIndex) 
+    {
+        await RetrieveData(pageIndex);
     }
 
     private async Task RetrieveData(int pageIndex)
@@ -60,7 +51,7 @@ public partial class Search : CommonBlazorBase
         Model.ListData = result;
         YammerMessage? firstMessage = result?.FirstOrDefault();
         Model.Pager.AllCount = (firstMessage != null ? firstMessage.ttlrows : 0);
-        saved_key_word = key_word;
+
         StateHasChanged();
 
     }
