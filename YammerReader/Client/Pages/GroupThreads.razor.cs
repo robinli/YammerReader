@@ -33,6 +33,7 @@ namespace YammerReader.Client.Pages
         private async Task ResetUI()
         {
             await Task.Delay(0);
+            Model.Group.group_name = "";
             Model.ListData = null;
             Model.Pager.AllCount = 0;
         }
