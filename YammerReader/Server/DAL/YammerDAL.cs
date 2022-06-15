@@ -204,6 +204,10 @@ inner join(
             /*查詢 回覆 資料*/
             foreach(YammerMessage item in data)
             {
+                if (item.match_rows == 1)
+                {
+                    continue;
+                }
                 //TODO 如何 High light 關鍵字
                 //item.body = item.body.Replace(pure_keyword, $"***{pure_keyword}***");
 
