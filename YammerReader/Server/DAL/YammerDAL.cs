@@ -201,16 +201,17 @@ inner join(
             parms.Add("search_keyword", search_keyword);
             List<YammerMessage> data = (await connection.QueryAsync<YammerMessage>(tsql, parms)).ToList();
 
-            /*查詢 回覆 資料*/
             foreach(YammerMessage item in data)
             {
+                //強調關鍵字
+                item.body = item.body.Replace(pure_keyword, $"<em>{pure_keyword}</em>");
+
+                /*查詢 回覆 資料*/
                 if (item.match_rows == 1)
                 {
                     continue;
                 }
-                //TODO 如何 High light 關鍵字
-                //item.body = item.body.Replace(pure_keyword, $"***{pure_keyword}***");
-
+                
                 string selectReplySql = @"select id, replied_to_id, parent_id, thread_id, thread_line_no
 , group_id, group_name, sender_id, sender_name
 , body, attachments, created_at
@@ -229,8 +230,8 @@ and parent_id<>''";
                     {
                         item.Replies = new List<YammerMessage>();
                     }
-                    //TODO 如何 High light 關鍵字
-                    //reply.body = reply.body.Replace(pure_keyword, $"***{pure_keyword}***");
+                    //High light 關鍵字
+                    reply.body = reply.body.Replace(pure_keyword, $"<em>{pure_keyword}</em>");
                     item.Replies.Add(reply);
                 }
             }

@@ -123,3 +123,14 @@ a, .btn-link {
     background-repeat: no-repeat;
     background-position: center center;
 }
+
+.yammer-message-body {
+    line-height: 20px;
+}
+    .yammer-message-body p {
+        margin: 0;
+    }
+
+    .yammer-message-body em {
+        background-color: #ffe7b8;
+    }
