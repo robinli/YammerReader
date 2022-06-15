@@ -12,7 +12,6 @@ public partial class Index : CommonBlazorBase
         await RetrieveData();
     }
 
-
     private async Task RetrieveData()
     {
         string url = "Yammer/GetAllGroups";

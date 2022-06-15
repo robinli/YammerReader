@@ -28,8 +28,16 @@ public partial class Threads : CommonBlazorBase
         }
     }
 
+    private async Task ResetUI()
+    {
+        await Task.Delay(0);
+        Model.ListData = null;
+    }
+
     private async Task RetrieveData(int pageIndex)
     {
+        await ResetUI();
+
         YammerFilter query = new YammerFilter()
         {
             thread_id = thread_id

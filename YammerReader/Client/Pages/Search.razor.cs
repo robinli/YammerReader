@@ -30,19 +30,26 @@ public partial class Search : CommonBlazorBase
         await RetrieveData(pageIndex);
     }
 
+    private async Task ResetUI()
+    {
+        await Task.Delay(0);
+        Model.ListData = null;
+        Model.Pager.AllCount = 0;
+    }
+
     private async Task RetrieveData(int pageIndex)
     {
         if (string.IsNullOrEmpty(key_word))
         {
             return;
         }
-        
-        Model.Pager.PageIndex = pageIndex;
+
+        await ResetUI();
 
         YammerFilter query = new YammerFilter()
         {
             search_keyword = key_word,
-            PageIndex = Model.Pager.PageIndex,
+            PageIndex = pageIndex,
             PageSize = Model.Pager.PageSize
         };
 
@@ -50,6 +57,7 @@ public partial class Search : CommonBlazorBase
         
         Model.ListData = result;
         YammerMessage? firstMessage = result?.FirstOrDefault();
+        Model.Pager.PageIndex = pageIndex;
         Model.Pager.AllCount = (firstMessage != null ? firstMessage.ttlrows : 0);
 
         StateHasChanged();

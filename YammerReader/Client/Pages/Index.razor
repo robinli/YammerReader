@@ -3,6 +3,13 @@
 
 <PageTitle>Index</PageTitle>
 
+@if (ListData.Any()==false)
+{
+    <LoadingIndicator />
+}
+else
+{
+
 <h1>Select group</h1>
 
 <div class="row">
@@ -23,3 +30,4 @@
   </div>
 </div>
 
+}

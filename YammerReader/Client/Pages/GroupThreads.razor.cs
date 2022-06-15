@@ -31,14 +31,21 @@ namespace YammerReader.Client.Pages
             await RetrieveData(pageIndex);
         }
 
+        private async Task ResetUI()
+        {
+            await Task.Delay(0);
+            Model.ListData = null;
+            Model.Pager.AllCount = 0;
+        }
+
         private async Task RetrieveData(int pageIndex)
         {
-            Model.Pager.PageIndex = pageIndex;
+            await ResetUI();
 
             YammerFilter query = new YammerFilter()
             {
                 group_id = group_id,
-                PageIndex = Model.Pager.PageIndex,
+                PageIndex = pageIndex,
                 PageSize = Model.Pager.PageSize
             };
 
@@ -48,6 +55,7 @@ namespace YammerReader.Client.Pages
             
             Model.ListData = result;
             YammerMessage? firstMessage = result?.FirstOrDefault();
+            Model.Pager.PageIndex = pageIndex;
             Model.Pager.AllCount = (firstMessage != null ? firstMessage.ttlrows : 0);
 
             StateHasChanged();
