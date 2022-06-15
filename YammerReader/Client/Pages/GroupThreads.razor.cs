@@ -23,7 +23,7 @@ namespace YammerReader.Client.Pages
 
         protected override async Task OnParametersSetAsync()
         {
-            await RetrieveData(1);
+            //await RetrieveData(1);
         }
 
         private async Task OnPageClicked(int pageIndex) 
