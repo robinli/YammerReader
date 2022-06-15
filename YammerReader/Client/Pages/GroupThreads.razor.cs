@@ -20,7 +20,6 @@ namespace YammerReader.Client.Pages
             await RetrieveData(1);
         }
 
-
         protected override async Task OnParametersSetAsync()
         {
             await RetrieveData(1);
@@ -34,6 +33,7 @@ namespace YammerReader.Client.Pages
         private async Task ResetUI()
         {
             await Task.Delay(0);
+            Model.Group.group_name = "";
             Model.ListData = null;
             Model.Pager.AllCount = 0;
         }
