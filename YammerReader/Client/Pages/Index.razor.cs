@@ -9,8 +9,6 @@ public partial class Index : CommonBlazorBase
 
     protected override async Task OnInitializedAsync()
     {
-        await Task.Delay(0);
-
         await RetrieveData();
     }
 
@@ -18,9 +16,16 @@ public partial class Index : CommonBlazorBase
     private async Task RetrieveData()
     {
         string url = "Yammer/GetAllGroups";
-        List<YammerGroup> result = await base.PostAsJsonAsync<List<YammerGroup>>(url, null);
-
-        ListData = result;
+        List<YammerGroup>? result = await GetCache<List<YammerGroup>>(url);
+        if(result == null)
+        {
+            result = await PostAsJsonAsync<List<YammerGroup>>(url, null);
+            await SaveCache(url, result);
+        }
+        if(result != null)
+        {
+            ListData = result;
+        }
     }
 
 }

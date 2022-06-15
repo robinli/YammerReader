@@ -8,6 +8,7 @@ namespace YammerReader.Client.Pages;
 public partial class Threads : CommonBlazorBase
 {
     [Parameter] public string? thread_id { get; set; }
+    private string? saved_thread_id { get; set; }
 
     public string ThreadName { get; set; } = "Thread name";
 
@@ -21,7 +22,10 @@ public partial class Threads : CommonBlazorBase
     }
     protected override async Task OnParametersSetAsync()
     {
-        await RetrieveData(1);
+        if(thread_id != saved_thread_id)
+        {
+            await RetrieveData(1);
+        }
     }
 
     private async Task RetrieveData(int pageIndex)
@@ -43,5 +47,6 @@ public partial class Threads : CommonBlazorBase
         ThreadName = result.group_name;
         Model.ListData = new List<YammerMessage>();
         Model.ListData.Add(result);
+        saved_thread_id = thread_id;
     }
 }

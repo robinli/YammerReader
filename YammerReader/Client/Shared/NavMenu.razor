@@ -66,11 +66,16 @@
     private async Task RetrieveData()
     {
         string url = "Yammer/GetAllGroups";
-        var result = await base.PostAsJsonAsync<List<YammerGroup>>(url, null!);
-        if (result != null)
+        List<YammerGroup>? result = await GetCache<List<YammerGroup>>(url);
+        if(result == null)
+        {
+            result = await PostAsJsonAsync<List<YammerGroup>>(url, null);
+            await SaveCache(url, result);
+        }
+        if(result != null)
         {
             ListData = result;
-        }        
+        }   
     }
 
     private string GetUrl(YammerGroup group)
