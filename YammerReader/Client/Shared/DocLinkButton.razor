@@ -1,34 +1,40 @@
 ﻿@inject NavigationManager MyNavigationManager
+<div class="row">
+<div class="col col-12 col-lg-6">
 @{
     switch (file?.file_type)
     {
         case "xlsx":
-            <a class="btn btn-outline-success w-50" href="@GetUrl()" target="_blank">
-                <span class="docicon-excel" aria-hidden="true"></span> <br/> @file?.file_name</a>
+        case "xls":
+            <a class="btn btn-outline-success w-100 p-3" href="@GetUrl()" target="_blank">
+                <span class="docicon-excel" aria-hidden="true"></span> <br/>! @file?.file_name</a>
             break;
 
-         case "docx":    
-            <a class="btn btn-outline-primary w-50" href="@GetUrl()" target="_blank">
+         case "docx": 
+         case "doc":    
+            <a class="btn btn-outline-primary w-100 p-3" href="@GetUrl()" target="_blank">
             <span class="docicon-word" aria-hidden="true"></span> <br/> @file?.file_name</a>
             break;
          
-         case "pptx":    
-            <a class="btn btn-outline-danger w-50" href="@GetUrl()" target="_blank">
+         case "pptx":
+         case "ppt":
+            <a class="btn btn-outline-danger w-100 p-3" href="@GetUrl()" target="_blank">
             <span class="docicon-powerpoint" aria-hidden="true"></span> <br/> @file?.file_name</a>
             break;
 
          case "pdf":
-            <a class="btn btn-outline-danger w-50" href="@file?.file_url" target="_blank">
+            <a class="btn btn-outline-danger w-100 p-3" href="@file?.file_url" target="_blank">
             <span class="docicon-pdf" aria-hidden="true"></span> <br/> @file?.file_name</a>
             break;
         
          default:
-            <a class="btn btn-outline-info w-50" href="@file?.file_url" target="_blank">
+            <a class="btn btn-outline-info w-100 p-3" href="@file?.file_url" target="_blank">
             <span class="docicon-other" aria-hidden="true"></span> <br/> @file?.file_name</a>
             break;
     }
 }
-
+</div>
+</div>
 
 @code{
     [Parameter] public YammerFile? file { get; set; }

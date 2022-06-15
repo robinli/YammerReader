@@ -3,13 +3,13 @@
 
 <PageTitle>@ThreadName</PageTitle>
 
-<div class="row">
-    <div class="col-12">
+<div class="row row-cols-1">
+    <div class="col">
         <h1>View Conversation</h1>
     </div>
     @if (Model.ListData == null)
     {
-        <div class="col-12">
+        <div class="col">
             <h6>0 total results for <b>@thread_id</b></h6>
         </div> 
     }

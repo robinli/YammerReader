@@ -1,54 +1,56 @@
 ﻿@inject NavigationManager MyNavigater
 @inherits Library.CommonBlazorBase
 
+@if (ListData == null)
+{
+    <LoadingIndicator />
+}
 @if (ListData != null)
 {
     @foreach (var item in ListData)
     {
-        <div class="card border-secondary mb-2">
-        <div class="card-header">
-            <div class="row">
-                <div class="col-4">
-                    @item.sender_name
-                </div>
-                <div class="col-8 text-end">
-                    <h6 class="card-subtitle mt-1 text-muted">@item.created_at</h6>
-                </div>
+        
+        <div class="card border-secondary mb-1">
+            <div class="card-header">
+                 <span class="fs-6">@item.sender_name</span>
+                 <span class="fs-6 float-end text-muted">
+                     <span class="oi oi-clock" aria-hidden="true"></span> 
+                     @string.Format("{0:yyyy-MM-dd HH:mm}", item.created_at)
+                 </span>
             </div>
-        </div>
-          <div class="card-body text-secondary">
-            <div class="yammer-message-body">@((MarkupString)FormatContext(item.body))</div>
-            <ul class="list-group list-group-flush">
-            @if (item.AttachmentFiles != null)
-            {
-                foreach (var file in item.AttachmentFiles)
+            <div class="card-body text-secondary">
+              <div class="yammer-message-body">@((MarkupString)FormatContext(item.body))</div>
+                <ul class="list-group list-group-flush">
+                @if (item.AttachmentFiles != null)
+                {
+                    foreach (var file in item.AttachmentFiles)
+                    {
+                        <li class="list-group-item">
+                        @if(CheckIsPicture(file.file_type))
+                        {
+                            <img class="img-fluid img-thumbnail" src="@file.file_url" alt="Uploaded image: No description set. @file.file_name">
+                        }
+                        else
+                        {
+                            <DocLinkButton file="@file" />
+                        }
+                        </li>
+                    }
+                }
+                @if (MyNavigater.Uri.Contains("/Threads/") == false)
                 {
                     <li class="list-group-item">
-                    @if(CheckIsPicture(file.file_type))
-                    {
-                        <img class="img-fluid img-thumbnail" src="@file.file_url" alt="Uploaded image: No description set. @file.file_name">
-                    }
-                    else
-                    {
-                        <DocLinkButton file="@file" />
-                    }
+                        <a class="btn btn-outline-primary btn-sm" @onclick="(()=>ThreadLinkClick(item))">
+                        <span class="oi oi-link-intact" aria-hidden="true"></span> View Conversation</a>
                     </li>
                 }
-            }
-            @if (MyNavigater.Uri.Contains("/Threads/") == false)
-            {
-                <li class="list-group-item">
-                    <a class="btn btn-outline-primary btn-sm" @onclick="(()=>ThreadLinkClick(item))">
-                    <span class="oi oi-link-intact" aria-hidden="true"></span> View Conversation</a>
-                </li>
-            }
-            </ul> 
+                </ul> 
             </div>
         </div>
-        @*讀取之前的回覆按鈕*@
+
         @if (MyNavigater.Uri.Contains("/Search/") == false && @item.CountPrevoiusReplies() > 0)
         {
-            <div class="card border-secondary bg-secondary bg-opacity-10 mb-1 ms-5">
+            <div class="card border-secondary bg-secondary bg-opacity-10 mb-1 ms-3">
                 <div class="card-header">
                     <button type="button" class="btn btn-outline-secondary btn-sm @SetDisabled(item)" @onclick="(()=>RetrieveReplies(item))">
                         <span class="oi oi-chat" aria-hidden="true"></span> Show @item.CountPrevoiusReplies() previous replies
@@ -56,22 +58,19 @@
                 </div>
             </div>
         }
-        @*回覆*@
+
         if (item.Replies != null)
         {
             @foreach (var replyitem in item.Replies.OrderBy(m=>m.created_at))
             {
-                <div class="card border-warning bg-warning bg-opacity-10 mb-1 ms-5">
+                <div class="card border-warning bg-warning bg-opacity-10 mb-1 ms-3">
                     <div class="card-header">
-                        <div class="row">
-                            <div class="col-4">
-                                <span class="badge bg-warning rounded-pill">@replyitem.thread_line_no</span>
-                                @replyitem.sender_name
-                            </div>
-                            <div class="col-8 text-end">
-                               <h6 class="card-subtitle mt-1 text-muted">@replyitem.created_at</h6>
-                            </div>
-                        </div>
+                        <span class="badge bg-warning rounded-pill">@replyitem.thread_line_no</span>
+                        <span class="fs-6">@replyitem.sender_name</span>
+                        <span class="fs-6 float-end text-muted">
+                            <span class="oi oi-clock" aria-hidden="true"></span> 
+                            @string.Format("{0:yyyy-MM-dd HH:mm}", replyitem.created_at)
+                        </span>
                     </div>
                     <div class="card-body border-warning pt-2 pb-2">
                         <div class="yammer-message-body">@((MarkupString)FormatContext(replyitem.body))</div>
@@ -98,5 +97,6 @@
                 </div>
             }
         }
+        <div class="border-bottom border-warning mt-2 mb-2"></div>
     }
  }

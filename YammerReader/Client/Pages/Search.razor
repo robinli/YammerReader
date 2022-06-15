@@ -4,22 +4,16 @@
 
 <PageTitle>Search @key_word</PageTitle>
 
-@if (Model.ListData == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-   <div class="row">
-        <div class="col-12">
-            <h1>Search Resules</h1>
-        </div>
-        <div class="col-12">
-            <h6>@Model.Pager.AllCount total results for <b>@key_word</b></h6>
-        </div>
-    </div> 
-}
+<div class="row">
+    <div class="col-12">
+        <h1>Search Resules</h1>
+    </div>
+    <div class="col-12">
+        <h6>@Model.Pager.AllCount total results for <b>@key_word</b></h6>
+    </div>
+</div> 
+
 
 <ThreadDisplay @ref="threadDisplay" ListData=@Model.ListData></ThreadDisplay>
 
-<Pager @ref="pagerLink" Model=@Model.Pager></Pager>
+<Pager @ref="pagerLink" Model=@Model.Pager OnPageClicked=@OnPageClicked></Pager>
