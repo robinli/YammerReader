@@ -17,11 +17,7 @@
                 <div class="yammer-message-header">
                     <div class="sender_name">@item.sender_name</div>
                     <div class="dash">-</div>
-                    <div class="created_at">
-                        @string.Format("{0:MMM d}", item.created_at)
-                        at
-                        @string.Format("{0:h:mm tt}", item.created_at)
-                    </div>
+                    <div class="created_at">@GetCreatedTimeText(item.created_at)</div>
                 </div>
             </div>
             <div class="card-body text-secondary">
@@ -53,7 +49,7 @@
                 </ul> 
             </div>
         </div>
-
+        @*檢視之前的回覆*@
         @if (MyNavigater.Uri.Contains("/Search/") == false && @item.CountPrevoiusReplies() > 0)
         {
             <div class="card border-secondary bg-secondary bg-opacity-10 mb-1 ms-3">
@@ -64,7 +60,7 @@
                 </div>
             </div>
         }
-
+        @*回覆*@
         if (item.Replies != null)
         {
             @foreach (var replyitem in item.Replies.OrderBy(m=>m.created_at))
@@ -72,24 +68,31 @@
                 <div class="card border-warning bg-warning bg-opacity-10 mb-1 ms-3">
                     <div class="card-header">
                         <div class="yammer-avatar-bridge">
-                        <Avatar user_name="@replyitem.sender_name"/>
-                    </div>
-                    <div class="yammer-message-header">
-                        <div class="sender_name">@replyitem.sender_name</div>
-                        <div class="dash">-</div>
-                        <div class="created_at">
-                            @string.Format("{0:MMM d}", replyitem.created_at)
-                            at
-                            @string.Format("{0:h:mm tt}", replyitem.created_at)
+                            <Avatar user_name="@replyitem.sender_name"/>
+                        </div>
+                        <div class="yammer-message-header" >
+                            <div class="sender_name">@replyitem.sender_name</div>
+                            <div class="dash">-</div>
+                            <div class="created_at">@GetCreatedTimeText(item.created_at)</div>
                         </div>
                     </div>
-                    </div>
                     <div class="card-body border-warning pt-2 pb-2">
+                        @if (replyitem.thread_line_no != item.thread_count)
+                        {
+                            <span class="position-absolute start-100 translate-middle badge rounded-pill bg-secondary">
+                                @replyitem.thread_line_no
+                            </span>
+                        }
+                        else
+                        {
+                            <span class="position-absolute start-100 translate-middle badge rounded-pill bg-dark">
+                                @replyitem.thread_line_no
+                            </span>
+                        }
                         <div class="yammer-message-body">@((MarkupString)FormatContext(replyitem.body))</div>
                         <ul class="list-group list-group-flush">
                         @if (replyitem.AttachmentFiles != null)
                         {
-                
                             foreach (var file in replyitem.AttachmentFiles)
                             {
                                 <li class="list-group-item list-group-item-warning">

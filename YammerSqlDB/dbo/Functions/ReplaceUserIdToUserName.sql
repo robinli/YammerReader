@@ -16,6 +16,11 @@ RETURNS nvarchar(max)
 AS 
 BEGIN
 
+IF charindex('[[user:', @body) = 0
+BEGIN
+	RETURN @body;
+END
+
 select @body = replace(@body, U.oldText, U.newText)
 			+ iif(charindex(U.oldText, @body)>0, '<cc>cc:'+U.newText+'</cc>', '')
 from(
