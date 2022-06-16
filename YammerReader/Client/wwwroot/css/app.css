@@ -142,3 +142,58 @@ a, .btn-link {
         font-style: italic;
         padding-top: 8px;
     }
+
+.yammer-avatar-bridge {
+    display:inline-block;
+    position: relative;
+    left: -8px;
+    top: 0px;
+}
+.yammer-avatar_circle {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: navy;
+    border-radius: 50%;
+    font-family: roboto, arial;
+    color: white;
+    text-align: center;
+}
+    .yammer-avatar_circle.Louis {
+        background-color: gold;
+    }
+    .yammer-avatar_circle.Kim {
+        background-color: navy;
+    }
+    .yammer-avatar_circle.George {
+        background-color: yellowgreen;
+    }
+    .yammer-avatar_circle.Robin {
+        background-color: orangered;
+    }
+    .yammer-avatar_circle.Yiching {
+        background-color:  darkgoldenrod;
+    }
+
+.yammer-message-header {
+    position: absolute;
+    left: 54px;
+    top: 18px;
+}
+
+    .yammer-message-header .sender_name {
+        display: inline-block;
+    }
+    .yammer-message-header .dash {
+        display: inline-block;
+        color: #6c757d !important;
+        font-size: 16px;
+        margin-left: -2px;
+    }
+    .yammer-message-header .created_at {
+        display: inline-block;
+        color: #6c757d !important;
+        font-size: 14px;
+        margin-left: -2px;
+    }

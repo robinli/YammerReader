@@ -9,14 +9,20 @@
 {
     @foreach (var item in ListData)
     {
-        
         <div class="card border-secondary mb-1">
             <div class="card-header">
-                 <span class="fs-6">@item.sender_name</span>
-                 <span class="fs-6 float-end text-muted">
-                     <span class="oi oi-clock" aria-hidden="true"></span> 
-                     @string.Format("{0:yyyy-MM-dd HH:mm}", item.created_at)
-                 </span>
+                <div class="yammer-avatar-bridge">
+                    <Avatar user_name="@item.sender_name"/>
+                </div>
+                <div class="yammer-message-header">
+                    <div class="sender_name">@item.sender_name</div>
+                    <div class="dash">-</div>
+                    <div class="created_at">
+                        @string.Format("{0:MMM d}", item.created_at)
+                        at
+                        @string.Format("{0:h:mm tt}", item.created_at)
+                    </div>
+                </div>
             </div>
             <div class="card-body text-secondary">
               <div class="yammer-message-body">@((MarkupString)FormatContext(item.body))</div>
@@ -65,12 +71,18 @@
             {
                 <div class="card border-warning bg-warning bg-opacity-10 mb-1 ms-3">
                     <div class="card-header">
-                        <span class="badge bg-warning rounded-pill">@replyitem.thread_line_no</span>
-                        <span class="fs-6">@replyitem.sender_name</span>
-                        <span class="fs-6 float-end text-muted">
-                            <span class="oi oi-clock" aria-hidden="true"></span> 
-                            @string.Format("{0:yyyy-MM-dd HH:mm}", replyitem.created_at)
-                        </span>
+                        <div class="yammer-avatar-bridge">
+                        <Avatar user_name="@replyitem.sender_name"/>
+                    </div>
+                    <div class="yammer-message-header">
+                        <div class="sender_name">@replyitem.sender_name</div>
+                        <div class="dash">-</div>
+                        <div class="created_at">
+                            @string.Format("{0:MMM d}", replyitem.created_at)
+                            at
+                            @string.Format("{0:h:mm tt}", replyitem.created_at)
+                        </div>
+                    </div>
                     </div>
                     <div class="card-body border-warning pt-2 pb-2">
                         <div class="yammer-message-body">@((MarkupString)FormatContext(replyitem.body))</div>
