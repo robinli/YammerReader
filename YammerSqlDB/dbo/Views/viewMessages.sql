@@ -1,13 +1,14 @@
-﻿/*--------------------------------------------------
+﻿
+/*--------------------------------------------------
 description: 查詢 Messages
 author: Robin
-date: 2016/11/24
+date: 2022/06/16
 testing Code:
 --------------------------------------------------
-select top 10 * from dbo.viewMessages M
-where M.group_id='5259393'
-and M.parent_id=''
-order by thread_last_at desc
+select * 
+from dbo.viewMessages M
+where M.thread_id='1041165328293888' 
+order by thread_line_no asc
 --------------------------------------------------*/
 CREATE VIEW [dbo].[viewMessages]
 AS
@@ -15,7 +16,8 @@ select M.id, M.replied_to_id, M.parent_id, M.thread_id, M.thread_line_no, M.grou
 	, M.sender_id, M.sender_name
 	, body = dbo.ReplaceUserIdToUserName(M.body)
 	, M.attachments, M.created_at
-	, thread_count = (select count(1)-1 from dbo.Messages R where R.thread_id = M.thread_id)
-	, thread_last_at = (select max(created_at) from dbo.Messages R where R.thread_id = M.thread_id)
+	, thread_count = IIF(M.thread_line_no=0, (select max(thread_line_no) from dbo.Messages R where R.thread_id = M.thread_id), 0)
+	, thread_last_at = IIF(M.thread_line_no=0, (select max(created_at) from dbo.Messages R where R.thread_id = M.thread_id), M.created_at)
 from dbo.Messages M
-where M.message_type='normal'
+where M.body<>'[redacted]' 
+and M.message_type='normal'

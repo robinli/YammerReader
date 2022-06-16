@@ -148,8 +148,8 @@ OFFSET @offset_rows ROWS";
             string tsql = $@"select id, replied_to_id, parent_id, thread_id, thread_line_no
 , group_id, group_name, sender_id, sender_name
 , body, attachments, created_at
-, thread_count = IIF(M.parent_id='', M.thread_count, 0)
-, thread_last_at = IIF(M.parent_id='', M.thread_last_at, M.created_at)
+, thread_count
+, thread_last_at
 from dbo.viewMessages M
 where M.thread_id = @thread_id
 order by created_at asc";

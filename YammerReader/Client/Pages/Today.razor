@@ -1,0 +1,25 @@
+﻿@page "/today"
+<h3>Today format</h3>
+
+<input value="@format" @onchange="OnChanged"  />
+<br/>
+<label >@show_date</label>
+
+
+@code {
+    private string format { get; set; } = "MMMM d";
+    private string show_date 
+    { 
+        get 
+        { 
+            return System.DateTime.Today.ToString(format, new System.Globalization.CultureInfo("en-US")); 
+        } 
+    }
+
+    private async Task OnChanged(ChangeEventArgs e)
+    {
+        await Task.Delay(0);
+        format = e?.Value.ToString();
+    }
+
+}

@@ -1,0 +1,39 @@
+﻿
+<div class="yammer-avatar_circle @first_name">@initials</div>
+
+@code{
+    [Parameter] public string? user_name { get; set; }
+    private string initials { get; set; } = "";
+    private string first_name { get; set; } = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Delay(0);
+
+        if (user_name == null)
+        {
+            initials = "**";
+            return;
+        }
+        string[] names = user_name.Split(" ");
+        first_name = names[0];
+
+        if (names.Length == 1)
+        {
+            initials = first_name.Substring(0, 1);
+            return;
+        }
+
+        string last_name = names.Last();
+        initials = first_name.Substring(0, 1)+last_name.Substring(0, 1);
+        return;
+    }
+
+
+    //protected override async Task OnParametersSetAsync()
+    //{
+        
+    //}
+
+
+}

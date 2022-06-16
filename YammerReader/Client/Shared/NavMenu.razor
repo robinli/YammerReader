@@ -86,6 +86,7 @@
 
     private async Task OnSearchChanged(ChangeEventArgs e)
     {
+        await Task.Delay(0);
         var key_word = e?.Value.ToString();
         if (string.IsNullOrEmpty(key_word) == false)
         {

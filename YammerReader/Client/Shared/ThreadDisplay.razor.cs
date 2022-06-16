@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using System.Globalization;
 using System.Text;
 using YammerReader.Client.Library;
 using YammerReader.Shared;
@@ -65,6 +66,12 @@ namespace YammerReader.Client.Shared
             }
 
             return htmlText.ToString();
+        }
+
+        private CultureInfo ci = new CultureInfo("en-US");
+        private string GetCreatedTimeText(DateTime created_at)
+        {
+            return $"{created_at.ToString("MMMM d", ci)} at {created_at.ToString("h:mm tt", ci)}";
         }
     }
 }

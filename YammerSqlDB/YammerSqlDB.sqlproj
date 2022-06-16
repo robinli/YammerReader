@@ -79,5 +79,6 @@
     <Build Include="dbo\Stored Procedures\GetMessageAttachments.sql" />
     <Build Include="dbo\Functions\ReplaceUserIdToUserName.sql" />
     <Build Include="dbo\Stored Procedures\查詢範例_Search.sql" />
+    <Build Include="dbo\Stored Procedures\批次修改資料.sql" />
   </ItemGroup>
 </Project>
