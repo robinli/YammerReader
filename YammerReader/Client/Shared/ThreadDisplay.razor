@@ -30,7 +30,9 @@
                         <li class="list-group-item">
                         @if(CheckIsPicture(file.file_type))
                         {
+                            <a href="javascript:return();" @onclick="(()=>OnPictureClicked(file))">
                             <img class="img-fluid img-thumbnail" src="@file.file_url" alt="Uploaded image: No description set. @file.file_name">
+                            </a>
                         }
                         else
                         {
@@ -98,7 +100,9 @@
                                 <li class="list-group-item list-group-item-warning">
                                     @if(CheckIsPicture(file.file_type))
                                     {
+                                        <a href="javascript:return();" @onclick="(()=>OnPictureClicked(file))">
                                         <img class="img-fluid img-thumbnail" src="@file.file_url" alt="Uploaded image: No description set. @file.file_name">
+                                        </a>
                                     }
                                     else
                                     {
@@ -115,3 +119,5 @@
         <div class="border-bottom border-warning mt-2 mb-2"></div>
     }
  }
+
+<PictureViewer PictureFile=@ChoosePicture />

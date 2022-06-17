@@ -12,6 +12,14 @@ namespace YammerReader.Client.Shared
 
         [Parameter] public List<YammerMessage>? ListData { get; set; }
 
+        private YammerFile? ChoosePicture { get; set; }
+
+        protected override async Task OnParametersSetAsync()
+        {
+            await Task.Delay(0);
+            ChoosePicture = null;
+        }
+
         private async Task RetrieveReplies(YammerMessage item)
         {
             YammerFilter query = new YammerFilter()
@@ -72,6 +80,12 @@ namespace YammerReader.Client.Shared
         private string GetCreatedTimeText(DateTime created_at)
         {
             return $"{created_at.ToString("MMMM d", ci)} at {created_at.ToString("h:mm tt", ci)}";
+        }
+
+        private async Task OnPictureClicked(YammerFile file)
+        {
+            await Task.Delay(0);
+            ChoosePicture = file;
         }
     }
 }
