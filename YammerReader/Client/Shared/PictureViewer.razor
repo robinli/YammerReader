@@ -1,0 +1,31 @@
+﻿@if (PictureFile != null)
+{
+<div class="modal fade show" tabindex="-1" style="display:block" role="dialog" aria-modal="true" aria-labelledby="Picture Viewer">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header bg-dark pt-2 pb-2">
+        <h5 class="modal-title text-white">
+            <span class="oi oi-image" aria-hidden="true"></span> @PictureFile.file_name</h5>
+      </div>
+      <div class="modal-body">
+        <img src="@PictureFile.file_url" alt="Uploaded image: No description set. @PictureFile.file_name">
+      </div>
+      <div class="modal-footer bg-dark bg-opacity-50 justify-content-center pt-1 pb-1">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal" @onclick="OnCloseClicked">
+            <span class="oi oi-x" aria-hidden="true"></span> Close Viewer</button>
+      </div>
+    </div>
+  </div>
+</div>
+}
+
+@code
+{
+    [Parameter] public YammerFile? PictureFile { get; set; }
+
+    private async Task OnCloseClicked()
+    {
+        await Task.Delay(0);
+        PictureFile = null;
+    }
+}
