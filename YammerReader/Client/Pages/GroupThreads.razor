@@ -11,7 +11,15 @@
     </div>
 </div>
 
-<ThreadDisplay @ref="threadDisplay" ListData=@Model.ListData></ThreadDisplay>
-
 <Pager @ref="pagerLink" Model=@Model.Pager OnPageClicked=@OnPageClicked></Pager>
- 
+<ThreadDisplay @ref="threadDisplay" ListData=@Model.ListData></ThreadDisplay>
+<Pager @ref="pagerLink" Model=@Model.Pager OnPageClicked=@OnPageClicked></Pager>
+
+@if (IsLoadingData == true)
+{
+    <div class="row">
+        <div class="col">
+            <LoadingIndicator />
+        </div>
+    </div>
+}

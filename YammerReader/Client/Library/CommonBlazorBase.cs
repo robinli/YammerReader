@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.JSInterop;
 using System.Net.Http.Json;
 using System.Text.Json;
@@ -7,9 +8,12 @@ namespace YammerReader.Client.Library
 {
     public class CommonBlazorBase : Microsoft.AspNetCore.Components.ComponentBase
     {
-        #region 停駐輸入欄位
-        [Inject] public IJSRuntime js { get; set; }
+        [Inject] protected IJSRuntime js { get; set; }
+        [Inject] protected NavigationManager NavigationManager { get; set; }
+        [Inject] private Blazored.LocalStorage.ILocalStorageService localStorage { get; set; }
+        [Inject] private IHttpClientFactory HttpClientFactory { get; set; }
 
+        #region JavaScript 停駐輸入欄位
         protected async Task SetFocusAsync(string Id, string stringValue)
         {
             try
@@ -24,9 +28,24 @@ namespace YammerReader.Client.Library
         }
         #endregion
 
-        #region 緩存變數
-        [Inject] private Blazored.LocalStorage.ILocalStorageService localStorage { get; set; }
+        protected override void OnInitialized()
+        {
+            NavigationManager.LocationChanged += HandleLocationChanged;
+        }
+        private void HandleLocationChanged(object? sender, LocationChangedEventArgs e)
+        {
+            if(e.Location.Contains("GroupThreads"))
+            {
+                return;
+            }
 
+            if (js != null)
+            {
+                _ = js.InvokeVoidAsync("UnRegisterPage");
+            }
+        }
+
+        #region 緩存變數
         protected async Task SaveCache(string cacheKey, object? value)
         {
             await localStorage.SetItemAsync(cacheKey, value);
@@ -48,8 +67,6 @@ namespace YammerReader.Client.Library
 
         #region 呼叫API
         //[Inject] HttpClient Http { get; set; }
-        [Inject] IHttpClientFactory HttpClientFactory { get; set; }
-
         protected async Task<T?> PostAsJsonAsync<T>(string url, object postValue)
         {
             var Http = HttpClientFactory.CreateClient("YammerReader.PublicServerAPI");
