@@ -30,6 +30,7 @@ namespace YammerReader.Client.Pages
             await js.InvokeVoidAsync("RegisterPage", dotnethelper);
 
             await ResetUI();
+            await GetGroupInfo();
             await RetrieveData(1);
         }
 
@@ -47,19 +48,24 @@ namespace YammerReader.Client.Pages
             Model.Pager.AllCount = 0;
         }
 
+        private async Task GetGroupInfo()
+        {
+            YammerFilter query = new YammerFilter()
+            {
+                group_id = group_id
+            };
+            Model.Group = await base.PostAsJsonAsync<YammerGroup>("Yammer/GetGroup", query);
+        }
+
         private async Task RetrieveData(int pageIndex)
         {
             //TODO 分頁元件 與 捲軸自動載入下一頁 操作上有衝突 ??
-
             YammerFilter query = new YammerFilter()
             {
                 group_id = group_id,
                 PageIndex = pageIndex,
                 PageSize = Model.Pager.PageSize
             };
-
-            Model.Group = await base.PostAsJsonAsync<YammerGroup>("Yammer/GetGroup", query);
-
             List<YammerMessage>? result = await base.PostAsJsonAsync<List<YammerMessage>>("Yammer/GetGroupThreads", query);
             if (result != null)
             {
@@ -73,13 +79,16 @@ namespace YammerReader.Client.Pages
             YammerMessage? firstMessage = result?.FirstOrDefault();
             Model.Pager.PageIndex = pageIndex;
             Model.Pager.AllCount = (firstMessage != null ? firstMessage.ttlrows : 0);
-
             StateHasChanged();
         }
 
         [JSInvokable]
         public async Task OnPageScrollEnd()
         {
+            if(IsLoadingData)
+            {
+                return;
+            }
             //await Task.Delay(0);
             int pageIndex = Model.Pager.PageIndex + 1;
             if (pageIndex > Model.Pager.TotalPage)

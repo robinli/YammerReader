@@ -1,7 +1,7 @@
 ﻿
 @if (Model.TotalPage > 1)
 {
-    <nav aria-label="Page navigation">
+    <nav aria-label="Page navigation" class="shadow-sm rounded">
         <ul class="pagination justify-content-center">
             <li style="cursor:pointer" class="page-item @(Model.PageIndex>1?"":"disabled")"><a class="page-link" @onclick="@(()=> PageToAsync(Model.PageIndex-1))">前頁</a></li>
             @if (Model.PageIndex > 3)
