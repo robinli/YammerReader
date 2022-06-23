@@ -11,11 +11,11 @@
     </div>
 </div>
 
-<Pager @ref="pagerLink" Model=@Model.Pager OnPageClicked=@OnPageClicked></Pager>
+<Pager @ref="pagerLink" Model=@Model.Pager OnPageClickedEvent=@OnPageClicked></Pager>
 <ThreadDisplay @ref="threadDisplay" ListData=@Model.ListData></ThreadDisplay>
-<Pager @ref="pagerLink" Model=@Model.Pager OnPageClicked=@OnPageClicked></Pager>
+<Pager @ref="pagerLink" Model=@Model.Pager OnPageClickedEvent=@OnPageClicked OnPageScrollEndEvent=@OnPageScrollEnd></Pager>
 
-@if (IsLoadingData == true)
+@if (IsLoadingNextPageData == true)
 {
     <div class="row">
         <div class="col">

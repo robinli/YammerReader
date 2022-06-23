@@ -45,17 +45,43 @@
 }
 @code {
     [Parameter] public DataModel.PagerModel Model { get; set; } = new DataModel.PagerModel();
-    [Parameter] public EventCallback<int> OnPageClicked { get; set; }
+    [Parameter] public EventCallback<int> OnPageClickedEvent { get; set; }
+    [Parameter] public EventCallback<int> OnPageScrollEndEvent { get; set; }
+    [Inject] protected IJSRuntime js { get; set; }
 
-    protected override async Task OnParametersSetAsync()
+    protected override Task OnInitializedAsync()
     {
-        await Task.Delay(0);
+        if (OnPageScrollEndEvent.HasDelegate)
+        {
+            var dotnethelper = DotNetObjectReference.Create(this);
+            js.InvokeVoidAsync("RegisterPage", new object[] { dotnethelper, "OnPageScrollEnd" });
+        }
+        return base.OnInitializedAsync();
     }
+
 
     private async Task PageToAsync(int pageIndex)
     {
         await Task.Delay(0);
-        Model.PageIndex = pageIndex;
-        await OnPageClicked.InvokeAsync(pageIndex);
+        if (OnPageClickedEvent.HasDelegate)
+        {
+            Model.PageIndex = pageIndex;
+            await OnPageClickedEvent.InvokeAsync(pageIndex);
+        }
     }
-}
+
+    [JSInvokable]
+    public async Task OnPageScrollEnd()
+    {
+        await Task.Delay(0);
+        if (OnPageClickedEvent.HasDelegate)
+        {
+            int pageIndex = Model.PageIndex + 1;
+            if (pageIndex > Model.TotalPage)
+            {
+                return;
+            }
+            await OnPageScrollEndEvent.InvokeAsync(pageIndex);
+        }
+    }
+ }

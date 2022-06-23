@@ -15,7 +15,10 @@ namespace YammerReader.Client.Pages
 
         private ThreadDisplay? threadDisplay { get; set; }
 
-        private bool IsLoadingData { get; set; } = false;
+        /// <summary>
+        /// 正在載入下一頁的資料
+        /// </summary>
+        private bool IsLoadingNextPageData { get; set; } = false;
 
         private Pager? pagerLink { get; set; }
 
@@ -26,18 +29,9 @@ namespace YammerReader.Client.Pages
 
         protected override async Task OnParametersSetAsync()
         {
-            var dotnethelper = DotNetObjectReference.Create(this);
-            await js.InvokeVoidAsync("RegisterPage", dotnethelper);
-
             await ResetUI();
             await GetGroupInfo();
             await RetrieveData(1);
-        }
-
-        private async Task OnPageClicked(int pageIndex) 
-        {
-            Model.ListData = null;
-            await RetrieveData(pageIndex);
         }
 
         private async Task ResetUI()
@@ -57,9 +51,15 @@ namespace YammerReader.Client.Pages
             Model.Group = await base.PostAsJsonAsync<YammerGroup>("Yammer/GetGroup", query);
         }
 
+        private bool IsRetrieveData = false;
         private async Task RetrieveData(int pageIndex)
         {
-            //TODO 分頁元件 與 捲軸自動載入下一頁 操作上有衝突 ??
+            if (IsRetrieveData)
+            {
+                return;
+            }
+            IsRetrieveData = true;
+
             YammerFilter query = new YammerFilter()
             {
                 group_id = group_id,
@@ -80,25 +80,27 @@ namespace YammerReader.Client.Pages
             Model.Pager.PageIndex = pageIndex;
             Model.Pager.AllCount = (firstMessage != null ? firstMessage.ttlrows : 0);
             StateHasChanged();
+            IsRetrieveData = false;
         }
 
-        [JSInvokable]
-        public async Task OnPageScrollEnd()
+        private async Task OnPageClicked(int pageIndex)
         {
-            if(IsLoadingData)
-            {
-                return;
-            }
-            //await Task.Delay(0);
-            int pageIndex = Model.Pager.PageIndex + 1;
-            if (pageIndex > Model.Pager.TotalPage)
-            {
-                return;
-            }
-            IsLoadingData = true;
-            StateHasChanged();
+            Model.ListData = null;
             await RetrieveData(pageIndex);
-            IsLoadingData = false;
+        }
+
+        public async Task OnPageScrollEnd(int pageIndex)
+        {
+            if(IsLoadingNextPageData)
+            {
+                return;
+            }
+            IsLoadingNextPageData = true;
+            StateHasChanged();
+
+            await RetrieveData(pageIndex);
+            
+            IsLoadingNextPageData = false;
             StateHasChanged();
         }
 
