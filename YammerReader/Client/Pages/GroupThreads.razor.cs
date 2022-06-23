@@ -15,7 +15,10 @@ namespace YammerReader.Client.Pages
 
         private ThreadDisplay? threadDisplay { get; set; }
 
-        private bool IsLoadingData { get; set; } = false;
+        /// <summary>
+        /// 正在載入下一頁的資料
+        /// </summary>
+        private bool IsLoadingNextPageData { get; set; } = false;
 
         private Pager? pagerLink { get; set; }
 
@@ -26,17 +29,9 @@ namespace YammerReader.Client.Pages
 
         protected override async Task OnParametersSetAsync()
         {
-            var dotnethelper = DotNetObjectReference.Create(this);
-            await js.InvokeVoidAsync("RegisterPage", dotnethelper);
-
             await ResetUI();
+            await GetGroupInfo();
             await RetrieveData(1);
-        }
-
-        private async Task OnPageClicked(int pageIndex) 
-        {
-            Model.ListData = null;
-            await RetrieveData(pageIndex);
         }
 
         private async Task ResetUI()
@@ -47,9 +42,23 @@ namespace YammerReader.Client.Pages
             Model.Pager.AllCount = 0;
         }
 
+        private async Task GetGroupInfo()
+        {
+            YammerFilter query = new YammerFilter()
+            {
+                group_id = group_id
+            };
+            Model.Group = await base.PostAsJsonAsync<YammerGroup>("Yammer/GetGroup", query);
+        }
+
+        private bool IsRetrieveData = false;
         private async Task RetrieveData(int pageIndex)
         {
-            //TODO 分頁元件 與 捲軸自動載入下一頁 操作上有衝突 ??
+            if (IsRetrieveData)
+            {
+                return;
+            }
+            IsRetrieveData = true;
 
             YammerFilter query = new YammerFilter()
             {
@@ -57,9 +66,6 @@ namespace YammerReader.Client.Pages
                 PageIndex = pageIndex,
                 PageSize = Model.Pager.PageSize
             };
-
-            Model.Group = await base.PostAsJsonAsync<YammerGroup>("Yammer/GetGroup", query);
-
             List<YammerMessage>? result = await base.PostAsJsonAsync<List<YammerMessage>>("Yammer/GetGroupThreads", query);
             if (result != null)
             {
@@ -73,23 +79,28 @@ namespace YammerReader.Client.Pages
             YammerMessage? firstMessage = result?.FirstOrDefault();
             Model.Pager.PageIndex = pageIndex;
             Model.Pager.AllCount = (firstMessage != null ? firstMessage.ttlrows : 0);
-
             StateHasChanged();
+            IsRetrieveData = false;
         }
 
-        [JSInvokable]
-        public async Task OnPageScrollEnd()
+        private async Task OnPageClicked(int pageIndex)
         {
-            //await Task.Delay(0);
-            int pageIndex = Model.Pager.PageIndex + 1;
-            if (pageIndex > Model.Pager.TotalPage)
+            Model.ListData = null;
+            await RetrieveData(pageIndex);
+        }
+
+        public async Task OnPageScrollEnd(int pageIndex)
+        {
+            if(IsLoadingNextPageData)
             {
                 return;
             }
-            IsLoadingData = true;
+            IsLoadingNextPageData = true;
             StateHasChanged();
+
             await RetrieveData(pageIndex);
-            IsLoadingData = false;
+            
+            IsLoadingNextPageData = false;
             StateHasChanged();
         }
 

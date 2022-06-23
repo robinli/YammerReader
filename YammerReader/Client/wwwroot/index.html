@@ -20,33 +20,7 @@
         <a class="dismiss">🗙</a>
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
-    <script>
-        var dotNetHelper;
-
-        window.RegisterPage = (dotNetObject) => {
-            if (dotNetHelper == null) {
-                dotNetHelper = dotNetObject;
-            }
-        }
-        window.UnRegisterPage = () => {
-            dotNetHelper = null;
-        }
-
-        window.addEventListener("scroll", () => {
-            //console.log("----------");
-            //console.log(window.innerHeight);//視窗高度
-            //console.log(window.scrollY);//捲軸垂值位移量
-            //console.log(document.body.scrollHeight);
-
-            if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
-                if (dotNetHelper != null) {
-                    //alert("Page End");
-                    //window.scrollTo(window.scrollX, window.scrollY-50);
-                    dotNetHelper.invokeMethodAsync("OnPageScrollEnd");
-                }
-            }
-        }); 
-    </script>
+    <script src="js/ScrollEnd.js"></script>
 </body>
 
 </html>
