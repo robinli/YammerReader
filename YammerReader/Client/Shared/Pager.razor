@@ -3,10 +3,10 @@
 {
     <nav aria-label="Page navigation" class="shadow-sm rounded">
         <ul class="pagination justify-content-center">
-            <li style="cursor:pointer" class="page-item @(Model.PageIndex>1?"":"disabled")"><a class="page-link" @onclick="@(()=> PageToAsync(Model.PageIndex-1))">前頁</a></li>
+            <li style="cursor:pointer" class="page-item @GetCss_AvoidDoubleClicked() @(Model.PageIndex>1?"":"disabled")"><a class="page-link" @onclick="@(()=> PageToAsync(Model.PageIndex-1))">前頁</a></li>
             @if (Model.PageIndex > 3)
             {
-                <li style="cursor:pointer" class="page-item @(Model.PageIndex>1?"":"disabled")"><a class="page-link" @onclick="@(()=> PageToAsync(1))">1</a></li>
+                <li style="cursor:pointer" class="page-item @GetCss_AvoidDoubleClicked() @(Model.PageIndex>1?"":"disabled")" ><a class="page-link" @onclick="@(()=> PageToAsync(1))">1</a></li>
             }
             @if (Model.PageIndex > 4)
             {
@@ -14,22 +14,22 @@
             }
             @if (Model.PageIndex > 2)
             {
-                <li style="cursor:pointer" class="page-item"><a class="page-link" @onclick="@(()=> PageToAsync(Model.PageIndex-2))">@(Model.PageIndex-2)</a></li>
+                <li style="cursor:pointer" class="page-item @GetCss_AvoidDoubleClicked()"><a class="page-link" @onclick="@(()=> PageToAsync(Model.PageIndex-2))">@(Model.PageIndex-2)</a></li>
             }
             @if (Model.PageIndex > 1)
             {
-                <li style="cursor:pointer" class="page-item"><a class="page-link" @onclick="@(()=> PageToAsync(Model.PageIndex-1))">@(Model.PageIndex-1)</a></li>
+                <li style="cursor:pointer" class="page-item @GetCss_AvoidDoubleClicked()"><a class="page-link" @onclick="@(()=> PageToAsync(Model.PageIndex-1))">@(Model.PageIndex-1)</a></li>
             }
 
             <li style="cursor:pointer" class="page-item active"><span class="page-link">@Model.PageIndex</span></li>
 
             @if (Model.PageIndex + 1 <= Model.TotalPage)
             {
-                <li style="cursor:pointer" class="page-item"><a class="page-link" @onclick="@(()=> PageToAsync(Model.PageIndex+1))">@(Model.PageIndex+1)</a></li>
+                <li style="cursor:pointer" class="page-item @GetCss_AvoidDoubleClicked()"><a class="page-link" @onclick="@(()=> PageToAsync(Model.PageIndex+1))">@(Model.PageIndex+1)</a></li>
             }
             @if (Model.PageIndex + 2 <= Model.TotalPage)
             {
-                <li style="cursor:pointer" class="page-item"><a class="page-link" @onclick="@(()=> PageToAsync(Model.PageIndex+2))">@(Model.PageIndex+2)</a></li>
+                <li style="cursor:pointer" class="page-item @GetCss_AvoidDoubleClicked()"><a class="page-link" @onclick="@(()=> PageToAsync(Model.PageIndex+2))">@(Model.PageIndex+2)</a></li>
             }
             @if (Model.PageIndex + 4 <= Model.TotalPage)
             {
@@ -37,9 +37,9 @@
             }
             @if (Model.PageIndex + 3 <= Model.TotalPage)
             {
-                <li style="cursor:pointer" class="page-item @(Model.PageIndex * Model.PageSize < Model.AllCount?"":"disabled")"><a class="page-link" @onclick="@(()=> PageToAsync(Model.TotalPage))">@Model.TotalPage</a></li>
+                <li style="cursor:pointer" class="page-item @GetCss_AvoidDoubleClicked() @(Model.PageIndex * Model.PageSize < Model.AllCount?"":"disabled")"><a class="page-link" @onclick="@(()=> PageToAsync(Model.TotalPage))">@Model.TotalPage</a></li>
             }
-            <li style="cursor:pointer" class="page-item @(Model.PageIndex * Model.PageSize < Model.AllCount?"":"disabled")"><a class="page-link" @onclick="@(()=> PageToAsync(Model.PageIndex+1))">次頁</a></li>
+            <li style="cursor:pointer" class="page-item @GetCss_AvoidDoubleClicked() @(Model.PageIndex * Model.PageSize < Model.AllCount?"":"disabled")"><a class="page-link" @onclick="@(()=> PageToAsync(Model.PageIndex+1))">次頁</a></li>
         </ul>
     </nav>
 }
@@ -54,34 +54,49 @@
         if (OnPageScrollEndEvent.HasDelegate)
         {
             var dotnethelper = DotNetObjectReference.Create(this);
-            js.InvokeVoidAsync("RegisterPage", new object[] { dotnethelper, "OnPageScrollEnd" });
+            js.InvokeVoidAsync("Register_ScrollEndEvent", new object[] { dotnethelper, "OnPageScrollEnd" });
         }
         return base.OnInitializedAsync();
     }
 
-
+    private bool IsCallPageTo = false;
     private async Task PageToAsync(int pageIndex)
     {
         await Task.Delay(0);
         if (OnPageClickedEvent.HasDelegate)
         {
+            if (IsCallPageTo) return;
+            IsCallPageTo = true;
+
             Model.PageIndex = pageIndex;
             await OnPageClickedEvent.InvokeAsync(pageIndex);
+
+            IsCallPageTo = false;
         }
     }
 
+    private string GetCss_AvoidDoubleClicked()
+    {
+        return (IsCallPageTo || IsCallScrollEnd ? "disabled" : "");
+    }
+
+    private bool IsCallScrollEnd = false;
     [JSInvokable]
     public async Task OnPageScrollEnd()
     {
-        await Task.Delay(0);
         if (OnPageClickedEvent.HasDelegate)
         {
+            if (IsCallScrollEnd) return;
+            IsCallScrollEnd = true;
+
             int pageIndex = Model.PageIndex + 1;
             if (pageIndex > Model.TotalPage)
             {
                 return;
             }
             await OnPageScrollEndEvent.InvokeAsync(pageIndex);
+
+            IsCallScrollEnd = false;
         }
     }
  }

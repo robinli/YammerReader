@@ -1,15 +1,15 @@
-﻿var dotNetHelper;
-var ScrollEndMethodName = "";
+﻿var ScrollEnd_DotNetHelper;
+var ScrollEnd_MethodName = "";
 
-window.RegisterPage = (dotNetObject, methodName) => {
-    if (dotNetHelper == null) {
-        dotNetHelper = dotNetObject;
-        ScrollEndMethodName = methodName;
+window.Register_ScrollEndEvent = (dotNetObject, methodName) => {
+    if (ScrollEnd_DotNetHelper == null) {
+        ScrollEnd_DotNetHelper = dotNetObject;
+        ScrollEnd_MethodName = methodName;
     }
 }
 
 window.UnRegisterPage = () => {
-    dotNetHelper = null;
+    ScrollEnd_DotNetHelper = null;
 }
 
 window.addEventListener("scroll", () => {
@@ -18,8 +18,8 @@ window.addEventListener("scroll", () => {
     //console.log(window.scrollY);//捲軸垂值位移量
     //console.log(document.body.scrollHeight);
     if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight * 0.8) {
-        if (dotNetHelper != null) {
-            dotNetHelper.invokeMethodAsync(ScrollEndMethodName);
+        if (ScrollEnd_DotNetHelper != null) {
+            ScrollEnd_DotNetHelper.invokeMethodAsync(ScrollEnd_MethodName);
         }
     }
 }); 

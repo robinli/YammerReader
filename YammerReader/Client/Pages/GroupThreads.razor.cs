@@ -54,10 +54,7 @@ namespace YammerReader.Client.Pages
         private bool IsRetrieveData = false;
         private async Task RetrieveData(int pageIndex)
         {
-            if (IsRetrieveData)
-            {
-                return;
-            }
+            if (IsRetrieveData) return;
             IsRetrieveData = true;
 
             YammerFilter query = new YammerFilter()
@@ -91,10 +88,7 @@ namespace YammerReader.Client.Pages
 
         public async Task OnPageScrollEnd(int pageIndex)
         {
-            if(IsLoadingNextPageData)
-            {
-                return;
-            }
+            if (IsLoadingNextPageData) return;
             IsLoadingNextPageData = true;
             StateHasChanged();
 
