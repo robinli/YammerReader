@@ -1,0 +1,30 @@
+@page "/login"
+@inherits Library.CommonBlazorBase
+@if(LoginFail){
+    <div class="alert alert-danger" role="alert">
+        Wrong Login or Password
+    </div>
+}
+<div class="row">
+    <div class="col-md-3 offset-md-1">
+        <EditForm Model="@Model" OnValidSubmit="@UserLogin">
+            <DataAnnotationsValidator />
+      
+            <legend>User Login</legend>
+            <div class="mb-3">
+                <label for="txtLoginId" class="form-label">Login ID</label>
+                <InputText id="txtLoginId" @bind-Value="Model.LOGIN_ID" class="form-control" />
+
+                <ValidationMessage For="() => Model.LOGIN_ID" />
+            </div>
+
+            <div class="mb-3">
+                <label for="txtPassword" class="form-label">Password</label>
+                <input id="txtPassword" @bind="Model.USER_PASSWORD" type="password" class="form-control" />
+                <ValidationMessage For="() => Model.USER_PASSWORD" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Login</button>
+        </EditForm>
+    </div>
+</div>

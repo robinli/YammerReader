@@ -1,6 +1,6 @@
 ﻿@page "/Threads/{thread_id}"
 @inherits Library.CommonBlazorBase
-
+@attribute [Authorize]
 <PageTitle>@ThreadName</PageTitle>
 
 <div class="row row-cols-1">

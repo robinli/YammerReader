@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using YammerReader.Server.DAL;
 using YammerReader.Shared;
@@ -7,6 +8,7 @@ namespace YammerReader.Server.Controllers
 {
     [Route("[controller]")]
     [ApiController]
+    [Authorize]
     public class YammerController : ControllerBase
     {
         [HttpPost]
@@ -19,6 +21,7 @@ namespace YammerReader.Server.Controllers
 
         [HttpPost]
         [Route("GetAllGroups")]
+        [AllowAnonymous]
         public async Task<List<YammerGroup>> GetAllGroups()
         {
             YammerDAL dal = new YammerDAL();

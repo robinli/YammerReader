@@ -1,6 +1,6 @@
 ﻿@page "/GroupThreads/{group_id}"
 @inherits Library.CommonBlazorBase
-
+@attribute [Authorize]
 <PageTitle>@Model.Group.group_name</PageTitle>
 
 <div class="row">
