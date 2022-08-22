@@ -79,7 +79,7 @@ namespace YammerReader.Client.Shared
         private CultureInfo ci = new CultureInfo("en-US");
         private string GetCreatedTimeText(DateTime created_at)
         {
-            return $"{created_at.ToString("MMMM d", ci)} at {created_at.ToString("h:mm tt", ci)}";
+            return $"{created_at.ToString("yyyy MMMM d", ci)} at {created_at.ToString("h:mm tt", ci)}";
         }
 
         private async Task OnPictureClicked(YammerFile file)
