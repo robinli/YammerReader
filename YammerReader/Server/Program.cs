@@ -1,4 +1,8 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.ResponseCompression;
+using YammerReader.Server.Common;
+using YammerReader.Server.DAL;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews()
@@ -9,6 +13,13 @@ builder.Services.AddControllersWithViews()
     });
 builder.Services.AddRazorPages();
 
+//[auth]
+builder.Services.AddAuthentication(
+    CookieAuthenticationDefaults.AuthenticationScheme
+).AddCookie();
+builder.Services.AddSingleton<IAuthorizationMiddlewareResultHandler, AuthorizationMiddlewareResultHandler>();
+
+builder.Services.AddScoped<AuthDAL>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -33,6 +44,10 @@ app.UseRouting();
 
 app.MapRazorPages();
 app.MapControllers();
+
+//[auth]
+app.UseAuthentication();
+app.UseAuthorization();
 app.MapFallbackToFile("index.html");
 
 app.Run();

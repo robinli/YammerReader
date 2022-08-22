@@ -1,6 +1,7 @@
 ﻿@page "/"
 @inherits Library.CommonBlazorBase
 
+@attribute [Authorize]
 <PageTitle>Index</PageTitle>
 
 @if (ListData.Any()==false)
