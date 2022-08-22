@@ -15,6 +15,7 @@ namespace YammerReader.Server.DAL
         {
             IConfiguration config = new ConfigurationBuilder()
                  .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                 .AddEnvironmentVariables()
                  .Build();
             return config;
         }
