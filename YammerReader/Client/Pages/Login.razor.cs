@@ -28,7 +28,7 @@ public partial class Login : CommonBlazorBase
         {
             (_authStateProvider as CustomAuthStateProvider).SetAuthInfo(result);
             //await _localStorageService.SetItemAsStringAsync("isauthenticated", "true");
-            _navigationManager.NavigateTo("/");
+            _navigationManager.NavigateTo("/", true);
         }
 
         LoginFail = result == null;
