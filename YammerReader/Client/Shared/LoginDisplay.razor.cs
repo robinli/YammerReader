@@ -18,6 +18,22 @@ public partial class LoginDisplay : CommonBlazorBase
     AuthenticationStateProvider _authStateProvider { get; set; }
     [Inject]
     NavigationManager _navigationManager { get; set; }
+
+    string UserId = "";
+    string LoginId = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        var user = (await _authStateProvider.GetAuthenticationStateAsync()).User;
+        if (user.Identity.IsAuthenticated)
+        {
+            UserId = user.Claims.SingleOrDefault(o => o.Type == "UserId")?.Value;
+            LoginId = user.Claims.SingleOrDefault(o => o.Type == "LoginId")?.Value;
+        }
+        await base.OnInitializedAsync();
+    }
+
+
     private async Task SignOut()
     {
         var result = await PostAsJsonAsync<bool>("auth/logout", null);
