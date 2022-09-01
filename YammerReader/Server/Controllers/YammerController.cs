@@ -65,6 +65,7 @@ namespace YammerReader.Server.Controllers
         }
 
         #region 下載圖片, 檔案
+        [AllowAnonymous]
         [HttpGet]
         [Route("GetPicture/dir/{user_code}/id/{file_id}/files/{file_name}")]
         public IActionResult GetPicture(string user_code, string file_id, string file_name)
@@ -74,10 +75,10 @@ namespace YammerReader.Server.Controllers
             {
                 return File(b, "image/jpeg");
             }
-            
+
             string fileType = GetFileType(file_name);
             string office_file_types = "pdf";
-            if(office_file_types.Contains(fileType))
+            if (office_file_types.Contains(fileType))
             {
                 return File(b, $"Application/{fileType}");
             }
@@ -95,7 +96,7 @@ namespace YammerReader.Server.Controllers
         private string GetFileType(string file_name)
         {
             int idx = file_name.IndexOf('.');
-            if(idx < 1)
+            if (idx < 1)
             {
                 return "";
             }
