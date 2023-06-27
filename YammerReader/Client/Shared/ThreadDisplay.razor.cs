@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 using System.Globalization;
 using System.Text;
 using YammerReader.Client.Library;
@@ -9,7 +10,7 @@ namespace YammerReader.Client.Shared
     public partial class ThreadDisplay : CommonBlazorBase
     {
         [Inject] NavigationManager? NavigationManager { get; set; }
-
+        [Inject] IJSRuntime? JSRuntime { get; set; }
         [Parameter] public List<YammerMessage>? ListData { get; set; }
 
         private YammerFile? ChoosePicture { get; set; }
@@ -54,7 +55,9 @@ namespace YammerReader.Client.Shared
         private async Task ThreadLinkClick(YammerMessage item)
         {
             await Task.Delay(0);
-            NavigationManager!.NavigateTo($"/Threads/{item.thread_id}", forceLoad: false, replace: false);
+            //  NavigationManager!.NavigateTo($"/Threads/{item.thread_id}", forceLoad: false, replace: false);
+            //修改為另開一個頁籤 https://stackoverflow.com/a/73489959/4872843
+            JSRuntime.InvokeAsync<object>("open", $"/Threads/{item.thread_id}", "_blank");
         }
 
         private bool CheckIsPicture(string file_type)
